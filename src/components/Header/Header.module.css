@@ -1,0 +1,19 @@
+.container{
+    padding-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+  width: 178px;
+}
+
+.email{
+    font-family: "TT Commons Bold";
+    font-size: 22px;
+    color: #000000;
+    line-height: 25px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}

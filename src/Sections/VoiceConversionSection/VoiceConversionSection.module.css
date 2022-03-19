@@ -1,0 +1,56 @@
+.container{
+
+}
+
+.h2{
+    font-family: 'TT Commons Bold', sans-serif;
+    font-weight: 700;
+    font-size: 110px;
+    line-height: 104px;
+    color: #000000;
+    margin-bottom: 18px;
+    margin-top: 0px;
+}
+
+.container p{
+    font-family: 'TT Commons Regular', sans-serif;
+    font-size: 26px;
+    line-height: 30px;
+    color: #000000;
+}
+
+.useCasesTitle{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: 'TT Commons Bold';
+    font-size: 22px;
+    line-height: 25px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.useCasesTitle img{
+    margin-right: 10px;
+}
+
+.useCases{
+    margin-top: 10px;
+}
+
+.useCases span{
+    margin-right: 20px;
+    font-family: 'TT Commons Regular';
+    font-size: 26px;
+    line-height: 30px;
+    color: #000000;
+
+}
+
+.voices{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+

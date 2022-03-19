@@ -1,0 +1,58 @@
+.container{
+    display: flex;
+    flex-direction: row;
+}
+
+.itemPeople{
+    position: relative;
+    width: 75px;
+}
+
+.imagePeople{
+    width: 64px;
+}
+
+.buttonPlay{
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.buttonPlay button{
+    border: none;
+    background-color: inherit;
+    border-radius: 100px;
+    width: 32px;
+    height: 32px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.buttonPlay button img{
+    width: 32px;
+    height: 32px;
+    margin-top: 7px;
+}
+
+.text{
+    display: flex;
+    flex-direction: column;
+    margin-left: 4px;
+}
+
+.text span:first-child{
+    font-family: 'TT Commons Medium', sans-serif;
+    font-size: 34px;
+    line-height: 38px;
+    color: #000000;
+}
+
+.text span:last-child{
+    font-family: 'TT Commons Regular', sans-serif;
+    font-size: 26px;
+    line-height: 30px;
+    color: #000000;
+}

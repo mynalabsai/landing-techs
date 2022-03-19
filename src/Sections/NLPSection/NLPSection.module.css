@@ -1,0 +1,94 @@
+.h2{
+    font-family: 'TT Commons Bold', sans-serif;
+    font-weight: 700;
+    font-size: 110px;
+    line-height: 104px;
+    color: #000000;
+    margin-top: 36px;
+    margin-bottom: 20px;
+}
+
+.container p{
+    font-family: 'TT Commons Regular', sans-serif;
+    font-size: 26px;
+    line-height: 30px;
+    color: #000000;
+}
+
+.useCasesTitle{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: 'TT Commons Bold';
+    font-size: 22px;
+    line-height: 25px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.useCasesTitle img{
+    margin-right: 10px;
+}
+
+.useCases{
+    margin-top: 10px;
+}
+
+.useCases span {
+    margin-right: 20px;
+    font-family: 'TT Commons Regular';
+    font-size: 26px;
+    line-height: 30px;
+    color: #000000;
+}
+
+.messages{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    max-width: 650px;
+}
+
+.messages div{
+    margin-top: 10px;
+}
+
+.messages div span{
+    display: flex;
+    align-items: center;
+    padding: 16px 20px;
+    font-family: 'TT Commons Medium';
+    font-size: 26px;
+    line-height: 30px;
+    color: #000000;
+
+
+}
+
+.messages div span img{
+    margin-left: 7px;
+}
+
+.messages div:first-child span{
+    background: #FFFFFF;
+    border-radius: 6px 30px 30px 30px;
+    float: left;
+}
+
+.messages div:nth-child(2) span{
+    background: #FFFAD0;
+    border-radius: 30px;
+    float: right;
+}
+
+.messages div:nth-child(3) span{
+    background: #FFFAD0;
+    border-radius: 30px 30px 6px 30px;
+    float: right;
+}
+
+.messages div:last-child span{
+    background: #FFFFFF;
+    border-radius: 6px 30px 30px 30px;
+    float: left;
+}
