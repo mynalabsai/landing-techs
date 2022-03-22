@@ -1,3 +1,4 @@
+
 .container{
     margin-top: 80px;
 }
@@ -21,3 +22,32 @@
     flex-direction: row;
     flex-wrap: wrap;
 }
+
+@media (max-width: 600px) {
+    .container{
+        margin-top: 43px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .imageGroup{
+
+    }
+
+    .imageGroup img{
+        width: 70px;
+    }
+
+    .h2{
+        font-size: 50px;
+        line-height: 49px;
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    .whiteBlocksAnchor{
+        justify-content: center;
+    }
+}
+

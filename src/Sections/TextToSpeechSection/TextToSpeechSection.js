@@ -6,7 +6,7 @@ import VoicePeople from "../../components/VoicePeople/VoicePeople";
 import obama from '../../image/people/img_obama.png'
 import test from '../../audio/test.mp3'
 
-const TextToSpeechSection = () => {
+const TextToSpeechSection = (props) => {
     const [audio, setAudio] = useState( new Audio(test))
       return(
           <div className={classes.container} id={'texttospeech'}>
@@ -30,7 +30,7 @@ const TextToSpeechSection = () => {
                     </div>
                 </div>
                 <div className={classes.outputVoice}>
-                   <VoicePeople image={obama} audio={audio} label={'Generated Voice'} name={'Barack Obama'}/>
+                   <VoicePeople matches={props.matches} type={'texttospeech'} image={obama} audio={audio} label={'Generated Voice'} name={'Barack Obama'}/>
                 </div>
             </div>
           </div>

@@ -1,0 +1,136 @@
+.h2{
+    font-family: 'TT Commons Bold', sans-serif;
+    font-weight: 700;
+    font-size: 110px;
+    line-height: 104px;
+    color: #000000;
+    margin-top: 36px;
+    margin-bottom: 20px;
+}
+
+.container p{
+    font-family: 'TT Commons Regular', sans-serif;
+    font-size: 26px;
+    line-height: 30px;
+    color: #000000;
+}
+
+
+.blocksMobile{
+    display: flex;
+    flex-direction: row;
+}
+
+.itemBlocksMobile{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin-top: 50px;
+}
+
+.itemBlocksMobile:first-child img{
+    width: 50px;
+}
+
+.itemBlocksMobile:nth-child(2) img{
+    width: 63px;
+    margin-top: 8px;
+    padding-bottom: 16px;
+}
+
+.itemBlocksMobile:last-child img{
+    width: 50px;
+}
+
+.itemBlocksMobile:not(:nth-child(2)) span{
+    margin-top: 12px;
+}
+
+.itemBlocksMobile span{
+    font-family: 'TT Commons Medium';
+    margin-top: 12px;
+    font-size: 34px;
+    line-height: 38px;
+    color: #000000;
+}
+
+.itemBlocksMobile ul{
+    padding-left: 24px;
+}
+
+.itemBlocksMobile ul li {
+    font-family: 'TT Commons Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 34px;
+    color: #000000;
+}
+
+@media (max-width: 600px) {
+    .h2 {
+        font-size: 50px;
+        line-height: 49px;
+        text-align: center;
+    }
+
+    .container p {
+        font-size: 22px;
+        line-height: 27px;
+        text-align: center;
+    }
+
+    .blocksMobile{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .itemBlocksMobile{
+        align-items: center;
+        margin-top: 24px;
+        width: 170px;
+    }
+
+    .itemBlocksMobile:first-child img{
+        width: 50px;
+    }
+
+    .itemBlocksMobile:nth-child(2) img{
+        width: 63px;
+        margin-top: 8px;
+        padding-bottom: 16px;
+    }
+
+    .itemBlocksMobile:last-child img{
+        width: 50px;
+    }
+
+    .itemBlocksMobile:not(:nth-child(2)) span{
+        margin-top: 12px;
+    }
+
+    .itemBlocksMobile span{
+        font-size: 22px;
+        line-height: 22px;
+    }
+
+    .itemBlocksMobile ul{
+        margin-top: 8px;
+        padding-left: 5px;
+        list-style: none;
+
+    }
+    .itemBlocksMobile ul li::before {
+        content: "\2022";
+        margin-right: 8px;
+    }
+
+    .itemBlocksMobile ul li {
+        font-size: 22px;
+        line-height: 28px;
+    }
+
+}
+

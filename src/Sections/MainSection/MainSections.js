@@ -17,7 +17,7 @@ import WhiteBlock from "./WhiteBlock/WhiteBlock";
 
 const MainSections = () =>{
     return(
-        <div className={classes.container}>
+        <div className={classes.container} id={'main'}>
             <div className={classes.imageGroup}>
                 <img src={phone} alt="phone"/>
                 <img src={camera} alt="camera"/>
@@ -29,10 +29,10 @@ const MainSections = () =>{
             </h2>
             <div className={classes.whiteBlocksAnchor}>
                 <WhiteBlock image={voice} text={'Voice Conversion'} anchor={'#voiceconversion'} />
-                <WhiteBlock image={nlp} text={'Conversational NLP'} anchor={'#nlp'}/>
                 <WhiteBlock image={textToSpeech} text={'Text-to-Speech'} anchor={'#texttospeech'}/>
-                <WhiteBlock image={faceSwap} text={'Face Swap'} anchor={'#faceswap'}/>
                 <WhiteBlock image={lipSync} text={'LipSync'} anchor={'#lipsync'}/>
+                <WhiteBlock image={faceSwap} text={'Face Swap'} anchor={'#faceswap'}/>
+                <WhiteBlock image={nlp} text={'Conversational NLP'} anchor={'#nlp'}/>
             </div>
         </div>
     )

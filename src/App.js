@@ -1,18 +1,35 @@
 import React, {useEffect, useState} from 'react';
 import './App.css';
-import Header from "./components/Header/Header";
+
+//import section
+import Header from "./Sections/Header/Header";
 import MainSections from "./Sections/MainSection/MainSections";
 import SeparatorSection from "./components/separatorSections/separatorSection";
 import VoiceConversionSection from "./Sections/VoiceConversionSection/VoiceConversionSection";
-import {dotsFunc} from './js/backgroundDot'
 import LipSyncSection from "./Sections/LipSyncSection/LipSyncSection";
 import TextToSpeechSection from "./Sections/TextToSpeechSection/TextToSpeechSection";
 import NLPSection from "./Sections/NLPSection/NLPSectionю";
 import FaceSwapSection from "./Sections/FaceSwapSection/FaceSwapSection";
+import WorkOnMobile from "./Sections/WorkOnMobileSection/WorkOnMobile";
+import Footer from "./Sections/Footer/Footer";
+
+//import dots
+import {dotsFunc} from './js/backgroundDot'
+import {dotsFuncMobile} from './js/backgroundDotMobile'
 
 const App = () => {
+    const [matches, setMatches] = useState(
+        window.matchMedia("(max-width: 600px)").matches
+    )
+
     useEffect(()=>{
-        dotsFunc()
+        window
+            .matchMedia("(max-width: 600px)")
+            .addEventListener('change', e => setMatches( e.matches ));
+        if(matches) dotsFuncMobile()
+        else dotsFunc()
+
+
     },[])
     return (
         <div className={'app'}>
@@ -26,16 +43,19 @@ const App = () => {
                     <Header/>
                     <MainSections/>
                     <SeparatorSection/>
-                    <VoiceConversionSection/>
+                    <VoiceConversionSection matches={matches}/>
                     <SeparatorSection/>
-                    <TextToSpeechSection/>
+                    <TextToSpeechSection matches={matches}/>
                     <SeparatorSection/>
-                    <LipSyncSection/>
+                    <LipSyncSection matches={matches}/>
                     <SeparatorSection/>
-                    <FaceSwapSection/>
+                    <FaceSwapSection matches={matches}/>
                     <SeparatorSection/>
                     <NLPSection/>
                     <SeparatorSection/>
+                    <WorkOnMobile/>
+                    <SeparatorSection/>
+                    <Footer/>
                 </div>
             </div>
         </div>

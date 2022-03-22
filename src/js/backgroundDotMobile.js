@@ -9,14 +9,14 @@ function fitElementToParent(el, padding) {
         var parentEl = el.parentNode;
         var elOffsetWidth = el.offsetWidth - pad;
         var parentOffsetWidth = parentEl.offsetWidth;
-        var ratio = parentOffsetWidth / elOffsetWidth;
+        var ratio = parentOffsetWidth / elOffsetWidth ;
         timeout = setTimeout(anime.set(el, {scale: ratio}), 10);
     }
     resize();
     window.addEventListener('resize', resize);
 }
 
-export let dotsFunc = function() {
+export let dotsFuncMobile = function() {
     var staggerVisualizerEl = document.querySelector('.stagger-visualizer');
     var dotsWrapperEl = staggerVisualizerEl.querySelector('.dots-wrapper');
     var dotsFragment = document.createDocumentFragment();
@@ -50,6 +50,7 @@ export let dotsFunc = function() {
         animation = anime.timeline({
             easing: 'easeInOutQuad'
         })
+
             .add({
                 targets: '.stagger-visualizer .dot',
                 keyframes: [

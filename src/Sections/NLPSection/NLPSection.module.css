@@ -32,6 +32,8 @@
 
 .useCases{
     margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .useCases span {
@@ -91,4 +93,41 @@
     background: #FFFFFF;
     border-radius: 6px 30px 30px 30px;
     float: left;
+}
+
+@media (max-width: 600px) {
+    .h2 {
+        font-size: 50px;
+        line-height: 49px;
+        text-align: center;
+    }
+
+    .container p {
+        font-size: 22px;
+        line-height: 27px;
+        text-align: center;
+    }
+
+    .useCasesTitle {
+        justify-content: center;
+    }
+
+    .useCases {
+        justify-content: center;
+    }
+
+    .useCases span {
+        font-size: 22px;
+        line-height: 25px;
+    }
+
+    .messages div span{
+        font-size: 22px;
+        line-height: 22px;
+        padding: 13px 18px;
+    }
+
+    .messages div:first-child span{
+        border-radius: 4px 22px 22px 22px;
+    }
 }

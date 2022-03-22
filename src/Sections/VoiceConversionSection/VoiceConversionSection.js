@@ -7,8 +7,10 @@ import VoicePeople from "../../components/VoicePeople/VoicePeople";
 import biden from '../../image/people/img_biden.png'
 import eilish from '../../image/people/img_eilish.png'
 
-const VoiceConversionSection = () =>{
+const VoiceConversionSection = (props) =>{
     const [audio, setAudio] = useState( new Audio(test))
+
+
 
     return(
         <div className={classes.container} id={'voiceconversion'}>
@@ -24,15 +26,15 @@ const VoiceConversionSection = () =>{
                 <span>— Anonymization</span>
             </div>
            <div className={classes.voices}>
-                <div style={{display: 'flex', marginTop: 46}}>
-                    <VoicePeople type={'first'} image={biden} audio={audio} label={'Replicated Voice'} name={'Joe Biden'}/>
-                    <VoicePeople image={biden} audio={audio} label={'Replicated Voice'} name={'Joe Biden'}/>
-                    <VoicePeople image={eilish} audio={audio} label={'Replicated Voice'} name={'Joe Biden'}/>
+                <div className={classes.firstVoices} >
+                    <VoicePeople matches={props.matches} type={'first'} image={biden} audio={audio} label={'Replicated Voice'} name={'Joe Biden'}/>
+                    <VoicePeople matches={props.matches} type={'withoutImage'} image={biden} audio={audio} label={'Replicated Voice'} name={'Joe Biden'}/>
+                    <VoicePeople matches={props.matches} image={eilish} audio={audio} label={'Replicated Voice'} name={'Joe Biden'}/>
                 </div>
-                <div style={{display: 'flex', marginTop: 46}}>
-                    <VoicePeople type={'first'} image={eilish} audio={audio} label={'Replicated Voice'} name={'Billie Eilish'}/>
-                    <VoicePeople image={biden} audio={audio} label={'Replicated Voice'} name={'Joe Biden'}/>
-                    <VoicePeople image={biden} audio={audio} label={'Replicated Voice'} name={'Joe Biden'}/>
+                <div className={classes.secondVoices}>
+                    <VoicePeople matches={props.matches} type={'first'} image={eilish} audio={audio} label={'Replicated Voice'} name={'Billie Eilish'}/>
+                    <VoicePeople matches={props.matches} type={'withoutImage'} image={biden} audio={audio} label={'Replicated Voice'} name={'Joe Biden'}/>
+                    <VoicePeople matches={props.matches} image={biden} audio={audio} label={'Replicated Voice'} name={'Joe Biden'}/>
                 </div>
            </div>
         </div>

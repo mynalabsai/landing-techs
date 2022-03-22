@@ -32,6 +32,8 @@
 
 .useCases{
     margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .useCases span {
@@ -40,4 +42,117 @@
     font-size: 26px;
     line-height: 30px;
     color: #000000;
+}
+
+.mySwiper{
+    margin-top: 40px;
+}
+
+.videoContainer{
+    display: flex;
+    flex-direction: column;
+    padding-top: 45px;
+}
+
+.borderVideo{
+    width: 274px;
+    height: 423px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    margin-top: 12px;
+}
+
+.video{
+    position: relative;
+    left: 0;
+    top: 0;
+    opacity: 1;
+    transition-duration: .2s;
+
+}
+
+.titleVideo{
+    background-color: inherit;
+}
+
+.textTitleVideo{
+    position: absolute;
+    font-family: 'TT Commons Medium';
+    font-size: 34px;
+    line-height: 38px;
+    color: #000000;
+    margin-top: -45px;
+}
+
+.imageTitleVideo {
+    position: absolute;
+    z-index: 1000;
+    margin-top: -38px;
+    margin-left: -6px;
+    width: 96px;
+    height: 96px;
+    border-radius: 100px;
+    padding-left: 6px;
+}
+
+.imageTitleVideo img{
+    width: 90px;
+}
+
+@media (max-width: 600px) {
+    .h2 {
+        font-size: 50px;
+        line-height: 49px;
+        text-align: center;
+    }
+
+    .container p {
+        font-size: 22px;
+        line-height: 27px;
+        text-align: center;
+    }
+
+    .useCasesTitle {
+        justify-content: center;
+    }
+
+    .useCases {
+        justify-content: center;
+    }
+
+    .useCases span {
+        font-size: 22px;
+        line-height: 25px;
+    }
+
+    .textTitleVideo{
+        font-size: 22px;
+        line-height: 22px;
+        margin-top: -15px;
+    }
+
+    .imageTitleVideo{
+        width: 70px;
+        height: 70px;
+        margin-top: -26px;
+        margin-left: -9px;
+    }
+
+    .borderVideo{
+        width: 168px;
+        height: 275px;
+    }
+
+    .videoContainer{
+        padding-top: 30px;
+    }
+
+    .imageTitleVideo img{
+        width: 64px;
+    }
+
+    .mySwiper{
+        margin-top: 20px;
+    }
 }

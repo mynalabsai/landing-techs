@@ -9,7 +9,7 @@ const NLPSection = () => {
   return(
       <div className={classes.container} id={'nlp'}>
           <h2 className={classes.h2}>
-              LipSync
+              Conversational NLP
           </h2>
           <p>It is a long established fact that a reader will be distracted by the readable content of a page when
               looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.</p>
@@ -25,8 +25,8 @@ const NLPSection = () => {
           <div className={classes.messages}>
             <div><span>Hey, Alex! How is your school today?</span></div>
             <div><span>I missed it for today, so sick of my homework</span></div>
-            <div><span>Just chilling in TikTok <img src={angel} alt=""/></span></div>
-            <div><span>Oh, such a good day! Haha <img src={rotateSmile} alt=""/></span></div>
+            <div><span>Just chilling in TikTok <img src={rotateSmile} alt=""/></span></div>
+            <div><span>Oh, such a good day! Haha <img src={angel} alt=""/></span></div>
           </div>
       </div>
   )

@@ -33,6 +33,8 @@
 
 .useCases{
     margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .useCases span{
@@ -82,4 +84,53 @@
 
 .outputVoice{
     margin-left: 50px;
+}
+
+@media (max-width: 600px) {
+    .h2{
+        font-size: 50px;
+        line-height: 49px;
+        text-align: center;
+    }
+
+    .container p{
+        font-size: 26px;
+        line-height: 30px;
+    }
+
+    .useCasesTitle{
+        justify-content: center;
+    }
+
+    .useCases {
+        justify-content: center;
+    }
+
+    .useCases span{
+        font-size: 22px;
+        line-height: 25px;
+    }
+
+    .functional{
+        flex-direction: column;
+    }
+
+    .outputVoice{
+        margin-left: 0px;
+    }
+
+    .inputText img{
+        width: 44px;
+    }
+
+    .textContainer span:first-child{
+        font-size: 22px;
+        line-height: 22px
+    }
+
+    .textContainer span:last-child{
+        font-size: 22px;
+        line-height: 22px;
+        color: rgba(0, 0, 0, 0.5);
+    }
 }
