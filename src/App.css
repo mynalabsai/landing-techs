@@ -1,28 +1,35 @@
 @font-face {
-    font-family: 'TT Commons Bold';
-    font-style: normal;
-    font-weight: normal;
+    font-family: 'TT Commons';
+    font-display: block;
+    font-weight: 700;
     src: url('./fonts/TT Commons Bold.otf');
 }
 
 @font-face {
-    font-family: 'TT Commons Medium';
-    font-style: normal;
-    font-weight: normal;
+    font-family: 'TT Commons';
+    font-display: block;
+    font-weight: 600;
+    src: url('./fonts/TT Commons DemiBold.otf');
+}
+
+@font-face {
+    font-family: 'TT Commons';
+    font-weight: 500;
+    font-display: block;
     src: url('./fonts/TT Commons Medium.otf');
 }
 
 @font-face {
-    font-family: 'TT Commons Regular';
-    font-style: normal;
-    font-weight: normal;
+    font-family: 'TT Commons';
+    font-weight: 400;
+    font-display: block;
     src: url('./fonts/TT Commons Regular.otf');
 }
 
 @font-face {
-    font-family: 'TT Commons Thin';
-    font-style: normal;
-    font-weight: normal;
+    font-family: 'TT Commons', sans-serif;;
+    font-weight: 100;
+    font-display: block;
     src: url('./fonts/TT Commons Thin.otf');
 }
 

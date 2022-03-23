@@ -1,13 +1,14 @@
 import React from 'react';
 import classes from './NLPSection.module.css'
 
+//import assets
 import star from "../../image/VoiceConversion/star.svg";
 import angel from '../../image/emoj/angel.svg'
 import rotateSmile from '../../image/emoj/rotateSmile.svg'
 
 const NLPSection = () => {
   return(
-      <div className={classes.container} id={'nlp'}>
+      <div className={classes.container} >
           <h2 className={classes.h2}>
               Conversational NLP
           </h2>

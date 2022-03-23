@@ -9,15 +9,44 @@
 
 .logo{
     width: 178px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.logo:hover{
+    transition: .3s;
+    opacity: 0.7;
 }
 
 .email{
-    font-family: "TT Commons Bold";
+    font-family: "TT Commons", sans-serif;
+    font-weight: 600;
     font-size: 22px;
     color: #000000;
     line-height: 25px;
     letter-spacing: 0.05em;
     text-transform: uppercase;
+    transition: .3s;
+}
+
+.email::after {
+    content: '';
+    width: 100%;
+    height: 1px;
+    opacity: 0;
+    display: block;
+    background: black;
+    transition: all .2s ease-in-out;
+    bottom: -3px;
+}
+
+.email:hover::after {
+    opacity: 1;
+}
+
+.email:hover{
+    transition: all .2s ease-in-out;
+    opacity: 0.7;
 }
 
 .mobileEmail{

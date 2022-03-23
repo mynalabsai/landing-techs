@@ -77,14 +77,16 @@
 }
 
 .text span:first-child{
-    font-family: 'TT Commons Medium', sans-serif;
+    font-family: 'TT Commons', sans-serif;
+    font-weight: 400;
     font-size: 34px;
     line-height: 38px;
     color: #000000;
 }
 
 .text span:last-child{
-    font-family: 'TT Commons Regular', sans-serif;
+    font-family: 'TT Commons', sans-serif;
+    font-weight: 400;
     font-size: 26px;
     line-height: 30px;
     color: #000000;

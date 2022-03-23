@@ -1,5 +1,5 @@
 .h2{
-    font-family: 'TT Commons Bold', sans-serif;
+    font-family: 'TT Commons', sans-serif;
     font-weight: 700;
     font-size: 110px;
     line-height: 104px;
@@ -9,7 +9,8 @@
 }
 
 .container p{
-    font-family: 'TT Commons Regular', sans-serif;
+    font-family: 'TT Commons', sans-serif;
+    font-weight: 400;
     font-size: 26px;
     line-height: 30px;
     color: #000000;
@@ -19,7 +20,8 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    font-family: 'TT Commons Bold';
+    font-family: 'TT Commons', sans-serif;
+    font-weight: 600;
     font-size: 22px;
     line-height: 25px;
     letter-spacing: 0.05em;
@@ -38,7 +40,8 @@
 
 .useCases span {
     margin-right: 20px;
-    font-family: 'TT Commons Regular';
+    font-family: 'TT Commons', sans-serif;;
+    font-weight: 400;
     font-size: 26px;
     line-height: 30px;
     color: #000000;
@@ -78,7 +81,8 @@
 
 .textTitleVideo{
     position: absolute;
-    font-family: 'TT Commons Medium';
+    font-family: 'TT Commons', sans-serif;
+    font-weight: 400;
     font-size: 34px;
     line-height: 38px;
     color: #000000;

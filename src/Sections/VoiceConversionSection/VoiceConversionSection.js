@@ -1,11 +1,14 @@
 import React, {useEffect, useState} from 'react';
 import classes from './VoiceConversionSection.module.css'
+
+//import assets
 import star from '../../image/VoiceConversion/star.svg'
 import test from '../../audio/test.mp3'
-import VoicePeople from "../../components/VoicePeople/VoicePeople";
-
 import biden from '../../image/people/img_biden.png'
 import eilish from '../../image/people/img_eilish.png'
+
+//import components
+import VoicePeople from "../../components/VoicePeople/VoicePeople";
 
 const VoiceConversionSection = (props) =>{
     const [audio, setAudio] = useState( new Audio(test))
@@ -13,7 +16,7 @@ const VoiceConversionSection = (props) =>{
 
 
     return(
-        <div className={classes.container} id={'voiceconversion'}>
+        <div className={classes.container}>
             <h2 className={classes.h2}>Voice Conversion</h2>
             <p>It is a long established fact that a reader will be distracted by the readable content of a page when
                 looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.</p>

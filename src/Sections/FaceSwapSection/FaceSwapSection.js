@@ -2,33 +2,39 @@ import React from 'react';
 import classes from './FaceSwapSection.module.css'
 import './FaceSwapSectionStyleSwiper.css'
 
+//import assets
 import testVideo from '../../video/muskOriganal.mp4'
 import star from "../../image/VoiceConversion/star.svg";
-import dicaprio from '../../image/people/img_dicaprio.png'
+import dicaprio from '../../image/people/img_dicaprio@4x.png'
+import elon from '../../image/people/img_elon@4x.png'
+import eilish from '../../image/people/img_eilish@4x.png'
+import grande from '../../image/people/img_grande@4x.png'
+import rock from '../../image/people/img_rock@4x.png'
+import zendaya from '../../image/people/img_zendaya@4x.png'
 
+//import swiper
 import { Swiper, SwiperSlide } from "swiper/react/swiper-react";
-import { FreeMode } from "swiper";
-import 'swiper/swiper.min.css'; // core Swiper
-import 'swiper/modules/navigation/navigation.min.css'; // Navigation module
+import 'swiper/swiper.min.css';
+import 'swiper/modules/navigation/navigation.min.css';
 
 
 const FaceSwapSection = ({matches}) => {
     const slides1 = [
-        {video: {testVideo}, borderColor: ''},
-        {video: {testVideo}, borderColor: '#FFD8D0'},
-        {video: {testVideo}, borderColor: '#FFDCCF'},
-        {video: {testVideo}, borderColor: '#FFE1CF'},
+        {video: testVideo},
+        {video: testVideo, imageTitle: dicaprio},
+        {video: testVideo, imageTitle: rock},
+        {video: testVideo, imageTitle: elon},
     ];
     const slides2 = [
-        {video: {testVideo}, borderColor: ''},
-        {video: {testVideo}, borderColor: '#FFD8D0'},
-        {video: {testVideo}, borderColor: '#FFDCCF'},
-        {video: {testVideo}, borderColor: '#FFE1CF'},
+        {video: testVideo},
+        {video: testVideo, imageTitle: grande},
+        {video: testVideo, imageTitle: eilish},
+        {video: testVideo, imageTitle: zendaya},
     ];
 
 
     return(
-        <div className={classes.container} id={'faceswap'}>
+        <div className={classes.container} >
             <h2 className={classes.h2}>
                 Face Swap
             </h2>
@@ -60,13 +66,13 @@ const FaceSwapSection = ({matches}) => {
                                     {index === 0
                                         ? <span className={classes.textTitleVideo}>Male • Original</span>
                                         : <div className={classes.imageTitleVideo}>
-                                            <img src={dicaprio} alt={'imgSwiper'}/>
+                                            <img src={slide.imageTitle} alt={'imgSwiper'}/>
                                           </div>
                                     }
                                 </span>
                                 <div className={classes.borderVideo}>
                                     <video style={index !== 0 ? {clipPath: 'url(#clipping)'} : {}} className={classes.video} width={matches ? "204" : "316"} height={matches ? "275": "423"} controls >
-                                        <source src={testVideo} type="video/mp4"/>
+                                        <source src={slide.video} type="video/mp4"/>
                                     </video>
                                     <svg>
                                         <defs>
@@ -104,13 +110,13 @@ const FaceSwapSection = ({matches}) => {
                                     {index === 0
                                         ? <span className={classes.textTitleVideo}>Female • Original</span>
                                         : <div className={classes.imageTitleVideo}>
-                                            <img src={dicaprio} alt={'imgSwiper'}/>
+                                            <img src={slide.imageTitle} alt={'imgSwiper'}/>
                                         </div>
                                     }
                                 </span>
                                 <div className={classes.borderVideo}>
                                     <video style={index !== 0 ? {clipPath: 'url(#clipping)'} : {}} className={classes.video} width={matches ? "204" : "316"} height={matches ? "275": "423"} controls >
-                                        <source src={testVideo} type="video/mp4"/>
+                                        <source src={slide.video} type="video/mp4"/>
                                     </video>
                                 </div>
                             </div>

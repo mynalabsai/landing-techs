@@ -7,14 +7,19 @@
     margin-left: 24px;
 }
 
+.imageGroup img{
+    width: 550px;
+    opacity: 0.7;
+}
+
 .h2{
-    font-family: 'TT Commons Bold', sans-serif;
+    font-family: 'TT Commons', sans-serif;
     font-weight: 700;
     font-size: 110px;
     line-height: 104px;
     color: #000000;
     margin-top: 36px;
-    margin-bottom: 20px;
+    margin-bottom: 60px;
 }
 
 .whiteBlocksAnchor{
@@ -36,14 +41,14 @@
     }
 
     .imageGroup img{
-        width: 70px;
+        width: 295px;
     }
 
     .h2{
         font-size: 50px;
         line-height: 49px;
         text-align: center;
-        margin-top: 15px;
+        margin-top: 0;
     }
 
     .whiteBlocksAnchor{

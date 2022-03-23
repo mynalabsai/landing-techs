@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import './App.css';
 
+
 //import section
 import Header from "./Sections/Header/Header";
 import MainSections from "./Sections/MainSection/MainSections";
@@ -28,8 +29,6 @@ const App = () => {
             .addEventListener('change', e => setMatches( e.matches ));
         if(matches) dotsFuncMobile()
         else dotsFunc()
-
-
     },[])
     return (
         <div className={'app'}>
@@ -42,15 +41,15 @@ const App = () => {
                 <div className={'website'}>
                     <Header/>
                     <MainSections/>
-                    <SeparatorSection/>
+                    <SeparatorSection id={'voiceconversion'}/>
                     <VoiceConversionSection matches={matches}/>
-                    <SeparatorSection/>
+                    <SeparatorSection id={'texttospeech'}/>
                     <TextToSpeechSection matches={matches}/>
-                    <SeparatorSection/>
+                    <SeparatorSection id={'lipsync'}/>
                     <LipSyncSection matches={matches}/>
-                    <SeparatorSection/>
+                    <SeparatorSection id={'faceswap'}/>
                     <FaceSwapSection matches={matches}/>
-                    <SeparatorSection/>
+                    <SeparatorSection id={'nlp'}/>
                     <NLPSection/>
                     <SeparatorSection/>
                     <WorkOnMobile/>

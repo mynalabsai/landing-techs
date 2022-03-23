@@ -40,7 +40,7 @@ const LipSyncSection = ({matches}) =>{
     }
 
     return(
-        <div className={classes.container} id={'lipsync'}>
+        <div className={classes.container} >
             <h2 className={classes.h2}>
                 LipSync
             </h2>

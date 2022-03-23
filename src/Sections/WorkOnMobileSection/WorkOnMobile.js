@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import classes from './WorkOnMobile.module.css'
 
+//import assets
 import faceSwapIcon from '../../image/anchors/face swap.svg'
 import lipSyncIcon from '../../image/anchors/lipsync.svg'
 import voiceConversionIcon from '../../image/anchors/voice.svg'

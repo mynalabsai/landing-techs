@@ -10,13 +10,14 @@
 }
 
 .star{
-    animation: moving 3s infinite linear;
+    animation: moving 6s infinite linear;
 }
 @keyframes moving {
-    100% {transform: rotate(-360deg);}
+    100% {transform: rotate(360deg);}
 }
+
 @-webkit-keyframes moving {
-    100% {transform: rotate(-360deg);}
+    100% {transform: rotate(360deg);}
 }
 
 @media (max-width: 600px) {
