@@ -54,7 +54,9 @@
 .videoContainer{
     display: flex;
     flex-direction: column;
+    position: relative;
     padding-top: 45px;
+    z-index: 1000;
 }
 
 .borderVideo{
@@ -62,9 +64,10 @@
     height: 423px;
     border-radius: 20px;
     overflow: hidden;
-    position: relative;
     margin-top: 12px;
+    position: relative;
 }
+
 
 .video{
     position: relative;
@@ -131,7 +134,7 @@
     }
 
     .textTitleVideo{
-        font-size: 22px;
+        font-size: 21px;
         line-height: 22px;
         margin-top: -15px;
     }

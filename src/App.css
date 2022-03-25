@@ -38,7 +38,8 @@
     src: local("TT Commons Thin");
 }
 
-
+.container{
+}
 
 a{
     text-decoration: none;
@@ -123,8 +124,9 @@ picture, img{
 
 
 @media (max-width: 600px) {
+
     .website{
-        padding: 24px 24px 50px 24px;
+
     }
     .animation-wrapper{
         width: 100% ;
