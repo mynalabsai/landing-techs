@@ -153,6 +153,7 @@
     .choiceVideo{
         margin-top: 32px;
         justify-content: center;
+
     }
 
     .typeVideo{
@@ -164,8 +165,8 @@
         font-size: 22px;
         line-height: 25px;
         border-radius: 28px;
-        align-items: flex-start;
-        width: 199px;
+        align-items: center;
+        width: 215px;
         margin: 0 auto;
         padding: 11px 18px 8px 8px;
     }

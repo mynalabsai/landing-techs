@@ -20,12 +20,14 @@
 .blocksMobile{
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .itemBlocksMobile{
     display: flex;
     flex-direction: column;
-    width: 300px;
+    width: 100%;
     margin-top: 50px;
 }
 

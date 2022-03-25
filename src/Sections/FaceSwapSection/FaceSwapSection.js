@@ -5,12 +5,12 @@ import './FaceSwapSectionStyleSwiper.css'
 //import assets
 import testVideo from '../../video/muskOriganal.mp4'
 import star from "../../image/VoiceConversion/star.svg";
-import dicaprio from '../../image/people/img_dicaprio@4x.png'
-import elon from '../../image/people/img_elon@4x.png'
-import eilish from '../../image/people/img_eilish@4x.png'
-import grande from '../../image/people/img_grande@4x.png'
-import rock from '../../image/people/img_rock@4x.png'
-import zendaya from '../../image/people/img_zendaya@4x.png'
+import dicaprio from '../../image/people/img_dicaprio@2x.png'
+import elon from '../../image/people/img_elon@2x.png'
+import eilish from '../../image/people/img_eilish@2x.png'
+import grande from '../../image/people/img_grande@2x.png'
+import rock from '../../image/people/img_rock@2x.png'
+import zendaya from '../../image/people/img_zendaya@2x.png'
 
 //import swiper
 import { Swiper, SwiperSlide } from "swiper/react/swiper-react";

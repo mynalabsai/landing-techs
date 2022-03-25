@@ -3,7 +3,9 @@ import classes from './VoiceConversionSection.module.css'
 
 //import assets
 import star from '../../image/VoiceConversion/star.svg'
-import test from '../../audio/test.mp3'
+import test1 from '../../audio/test.mp3'
+import test2 from '../../audio/test.mp3'
+import test3 from '../../audio/test.mp3'
 import biden from '../../image/people/img_biden.png'
 import eilish from '../../image/people/img_eilish.png'
 
@@ -11,7 +13,23 @@ import eilish from '../../image/people/img_eilish.png'
 import VoicePeople from "../../components/VoicePeople/VoicePeople";
 
 const VoiceConversionSection = (props) =>{
-    const [audio, setAudio] = useState( new Audio(test))
+    const [audios1, setAudios1] = useState(
+        [
+            {audio : new Audio(test1), paused: true, label: 'Replicated Voice', name: 'Joe Biden', type: 'first', image: biden},
+            {audio : new Audio(test2), paused: true, label: 'Input Voice', name: 'Male', type: 'withoutImage', image: biden},
+            {audio : new Audio(test3), paused: true, label: 'Replaced Voice', name: 'to Joe Biden', type: '', image: biden},
+
+        ]
+    )
+
+    const [audios2, setAudios2] = useState(
+        [
+            {audio : new Audio(test1), paused: true, label: 'Replicated Voice', name: 'Billie Eilish', type: 'first', image: eilish},
+            {audio : new Audio(test1), paused: true, label: 'Input Voice', name: 'Female', type: 'withoutImage', image: biden},
+            {audio : new Audio(test1), paused: true, label: 'Replaced Voice', name: 'Billie Eilish', type: '', image: eilish},
+
+        ]
+    )
 
 
 
@@ -30,14 +48,18 @@ const VoiceConversionSection = (props) =>{
             </div>
            <div className={classes.voices}>
                 <div className={classes.firstVoices} >
-                    <VoicePeople matches={props.matches} type={'first'} image={biden} audio={audio} label={'Replicated Voice'} name={'Joe Biden'}/>
-                    <VoicePeople matches={props.matches} type={'withoutImage'} image={biden} audio={audio} label={'Replicated Voice'} name={'Joe Biden'}/>
-                    <VoicePeople matches={props.matches} image={eilish} audio={audio} label={'Replicated Voice'} name={'Joe Biden'}/>
+                    {audios1.map((audio,index)=>{
+                        return(
+                            <VoicePeople matches={props.matches} index={index} audios={audios1} setAudios={setAudios1} />
+                        )
+                    })}
                 </div>
                 <div className={classes.secondVoices}>
-                    <VoicePeople matches={props.matches} type={'first'} image={eilish} audio={audio} label={'Replicated Voice'} name={'Billie Eilish'}/>
-                    <VoicePeople matches={props.matches} type={'withoutImage'} image={biden} audio={audio} label={'Replicated Voice'} name={'Joe Biden'}/>
-                    <VoicePeople matches={props.matches} image={biden} audio={audio} label={'Replicated Voice'} name={'Joe Biden'}/>
+                    {audios2.map((audio,index)=>{
+                        return(
+                            <VoicePeople matches={props.matches} index={index}  audios={audios2} setAudios={setAudios2}/>
+                        )
+                    })}
                 </div>
            </div>
         </div>

@@ -10,6 +10,7 @@
 }
 
 .star{
+    width: 40px;
     animation: moving 6s infinite linear;
 }
 @keyframes moving {

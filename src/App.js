@@ -19,19 +19,28 @@ import {dotsFunc} from './js/backgroundDot'
 import {dotsFuncMobile} from './js/backgroundDotMobile'
 
 const App = () => {
+
     const [matches, setMatches] = useState(
         window.matchMedia("(max-width: 600px)").matches
     )
+
+    const startAnimateDots = () => {
+        if(matches) dotsFuncMobile()
+        else dotsFunc()
+    }
 
     useEffect(()=>{
         window
             .matchMedia("(max-width: 600px)")
             .addEventListener('change', e => setMatches( e.matches ));
-        if(matches) dotsFuncMobile()
-        else dotsFunc()
+        startAnimateDots()
+
     },[])
+
+
+
     return (
-        <div className={'app'}>
+        <div className={'app'} id={'app'}>
             <div className={'container'}>
                 <div className="animation-wrapper">
                     <div className="stagger-visualizer">
@@ -39,7 +48,7 @@ const App = () => {
                     </div>
                 </div>
                 <div className={'website'}>
-                    <Header/>
+                    <Header matches={matches}/>
                     <MainSections/>
                     <SeparatorSection id={'voiceconversion'}/>
                     <VoiceConversionSection matches={matches}/>

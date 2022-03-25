@@ -48,7 +48,8 @@ export let dotsFuncMobile = function() {
         nextIndex = anime.random(0, numberOfElements-1);
 
         animation = anime.timeline({
-            easing: 'easeInOutQuad'
+            easing: 'easeInOutQuad',
+            complete: play
         })
 
             .add({

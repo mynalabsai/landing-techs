@@ -3,6 +3,7 @@
     font-display: block;
     font-weight: 700;
     src: url('./fonts/TT Commons Bold.otf');
+    src: local("TT Commons Bold");
 }
 
 @font-face {
@@ -10,6 +11,7 @@
     font-display: block;
     font-weight: 600;
     src: url('./fonts/TT Commons DemiBold.otf');
+    src: local("TT Commons DemiBold");
 }
 
 @font-face {
@@ -17,6 +19,7 @@
     font-weight: 500;
     font-display: block;
     src: url('./fonts/TT Commons Medium.otf');
+    src: local("TT Commons Medium");
 }
 
 @font-face {
@@ -24,6 +27,7 @@
     font-weight: 400;
     font-display: block;
     src: url('./fonts/TT Commons Regular.otf');
+    src: local("TT Commons Regular");
 }
 
 @font-face {
@@ -31,6 +35,7 @@
     font-weight: 100;
     font-display: block;
     src: url('./fonts/TT Commons Thin.otf');
+    src: local("TT Commons Thin");
 }
 
 
@@ -40,9 +45,17 @@ a{
     color: inherit;
 }
 
+picture, img{
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
 .website{
     max-width: 1280px;
     margin: 0 auto;
+    padding: 0 24px;
 }
 
 .container {
@@ -99,27 +112,15 @@ a{
     width: 23px;
     height: 23px;
     margin: 16px;
-    background-color: currentColor;
     border-radius: 50%;
 }
 
 
 .stagger-visualizer .dot {
-    background-color: transparent;
-    background-image: linear-gradient(180deg, #FFFFFF 8%, #D3CDC6 100%);
+    background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
 }
 
 
-.stagger-visualizer .cursor {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 37px;
-    height: 37px;
-    margin: 9px;
-    background-color: currentColor;
-    border-radius: 50%;
-}
 
 @media (max-width: 600px) {
     .website{
@@ -144,7 +145,7 @@ a{
         mask-composite: intersect;
     }
     .stagger-visualizer{
-        height: 700px ;
+        height: 400px ;
 
     }
 
