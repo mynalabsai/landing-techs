@@ -84,14 +84,24 @@
 }
 
 .inputText img{
-    width: 50px;
+    width: 60px;
 }
 
 .outputVoice{
     margin-left: 50px;
 }
 
-@media (max-width: 600px) {
+
+@media (max-width: 1024px) {
+    .functional{
+        flex-direction: column;
+    }
+    .outputVoice{
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 768px) {
     .h2{
         font-size: 50px;
         line-height: 49px;
@@ -121,7 +131,7 @@
     }
 
     .outputVoice{
-        margin-left: 0px;
+        margin-left: 0;
     }
 
     .inputText img{

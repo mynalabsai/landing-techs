@@ -49,6 +49,8 @@
 
 .mySwiper{
     margin-top: 40px;
+    width: 100%;
+
 }
 
 .videoContainer{
@@ -75,7 +77,12 @@
     top: 0;
     opacity: 1;
     transition-duration: .2s;
+    width: 316px;
+    height: 423px;
+}
 
+.mySwiper div div:not(:first-child) div div video{
+    clip-path: url('#clipping');
 }
 
 .titleVideo{
@@ -107,7 +114,34 @@
     width: 90px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1024px) {
+    .borderVideo{
+        width: 205px;
+        height: 316px;
+    }
+
+    .video{
+        width: 235px;
+        height: 316px;
+    }
+    .mySwiper div div:not(:first-child) div div video{
+        clip-path: url('#clipping');
+    }
+
+    .mySwiper{
+        margin-top: 20px;
+        position: absolute;
+        left: -80px;
+        padding-left: 80px;
+        width: calc(100% + 160px);
+    }
+
+    .textTitleVideo{
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 768px) {
     .h2 {
         font-size: 50px;
         line-height: 49px;
@@ -151,6 +185,15 @@
         height: 275px;
     }
 
+    .video{
+        width: 204px;
+        height: 275px;
+    }
+
+    .mySwiper div div:not(:first-child) div div video{
+        clip-path: url('#clipping768px');
+    }
+
     .videoContainer{
         padding-top: 30px;
     }
@@ -161,5 +204,9 @@
 
     .mySwiper{
         margin-top: 20px;
+        position: absolute;
+        left: -24px;
+        padding-left: 24px;
+        width: calc(100% + 48px);
     }
 }

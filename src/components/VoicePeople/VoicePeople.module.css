@@ -1,6 +1,7 @@
 .container{
     display: flex;
     flex-direction: row;
+    margin-left: 50px;
 }
 
 .itemPeople{
@@ -55,7 +56,6 @@
     width: 64px;
     height: 64px;
     cursor: pointer;
-
     padding: 0;
 }
 
@@ -93,21 +93,62 @@
     color: #000000;
 }
 
+@media (max-width: 1024px) {
+    .container{
+        align-items: center;
+        margin-top: 35px;
+        margin-left: 0;
+    }
+    .imagePeople{
+        position: relative;
+    }
+    .itemPeople{
+        width: 64px;
+        height: 64px;
+    }
 
-@media (max-width: 600px) {
+    .imagePeople{
+        width: 64px;
+        position: relative;
+    }
+
+    .buttonPlay{
+        width: 38px;
+        height: 38px;
+        bottom: -3px;
+        right: -7px;
+    }
+
+    .buttonPlay button{
+        width: 32px;
+        height: 32px;
+
+    }
+
+    .buttonPlay button img{
+
+        width: 32px;
+        height: 32px;
+    }
+
+
+}
+
+@media (max-width: 768px) {
     .container{
         align-items: center;
         margin-top: 14px;
+
     }
 
     .itemPeople{
         width: 45px;
         height: 45px;
-
     }
 
     .imagePeople{
         width: 45px;
+        position: relative;
     }
 
     .buttonPlay{
@@ -129,15 +170,24 @@
         height: 22px;
     }
 
+    .buttonPlayWithoutImage{
+        width: 45px;
+        height: 45px;
+        position: relative;
+
+    }
     .buttonPlayWithoutImage button{
-        margin-left: -15px;
-        margin-right: -10px;
+        position: absolute;
+        width: 45px;
+        height: 45px;
     }
 
     .buttonPlayWithoutImage button img{
-        width: 44px;
-        height: 44px;
-
+        width: 45px;
+        height: 45px;
+        position: absolute;
+        top: 0;
+        right: 0;
     }
 
     .text{
@@ -155,5 +205,9 @@
         font-size: 22px;
         line-height: 22px;
         color: rgba(0, 0, 0, 0.5);
+        overflow:hidden;
+        text-overflow: ellipsis;
+        white-space: pre;
+        width: 120px;
     }
 }

@@ -28,8 +28,8 @@ const MainSections = () =>{
                     <source type="image/webp" media="(max-width: 1280px)" srcSet={hero_header_icons2xWebp}/>
                     <source type="image/png" media="(max-width: 1280px)" srcSet={hero_header_icons2xPng}/>
 
-                    <source type="image/webp" media="(max-width: 600px)" srcSet={hero_header_iconsWebp}/>
-                    <source type="image/png" media="(max-width: 600px)" srcSet={hero_header_iconsPng}/>
+                    <source type="image/webp" media="(max-width: 768px)" srcSet={hero_header_iconsWebp}/>
+                    <source type="image/png" media="(max-width: 768px)" srcSet={hero_header_iconsPng}/>
 
                     <img src={hero_header_icons4xPng} alt="heroHeader"/>
                 </picture>

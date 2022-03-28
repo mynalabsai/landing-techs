@@ -21,7 +21,7 @@ import {dotsFuncMobile} from './js/backgroundDotMobile'
 const App = () => {
 
     const [matches, setMatches] = useState(
-        window.matchMedia("(max-width: 600px)").matches
+        window.matchMedia("(max-width: 768px)").matches
     )
 
     const startAnimateDots = () => {
@@ -31,7 +31,7 @@ const App = () => {
 
     useEffect(()=>{
         window
-            .matchMedia("(max-width: 600px)")
+            .matchMedia("(max-width: 768px)")
             .addEventListener('change', e => setMatches( e.matches ));
         startAnimateDots()
 

@@ -28,7 +28,7 @@
     flex-wrap: wrap;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .container{
         margin-top: 43px;
         display: flex;

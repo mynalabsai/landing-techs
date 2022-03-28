@@ -6,7 +6,7 @@ const Footer = () => {
         <div className={classes.container}>
             <h2 className={classes.h2}>
                 We’re Open <br/>
-                for Collaborations
+                for Collabo&shy;ra&shy;tions
             </h2>
             <div className={classes.contacts}>
                 <a href={'mailto:contact@mynalabs.ai'}>CONTACT@MYNALABS.AI</a>

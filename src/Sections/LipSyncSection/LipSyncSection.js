@@ -9,6 +9,7 @@ import muskGenerated2 from '../../video/musk_celebration_noeffect.mp4'
 import arrow from '../../image/arrow.svg'
 import play from '../../image/playIcons/play.svg'
 import pause from '../../image/playIcons/pause.svg'
+import poster from "../../image/poster.jpg";
 
 const LipSyncSection = ({matches}) =>{
     const [choiceVideo, setChoiceVideo] = useState(muskGenerated1)
@@ -59,7 +60,7 @@ const LipSyncSection = ({matches}) =>{
                 <div className={classes.videoContainer}>
                     <span className={classes.typeVideo}>Original Video</span>
                     <div className={classes.borderVideo}>
-                        <video className={classes.video} width={matches ? "204" : "316"} height={matches ? "275": "423"} controls >
+                        <video preload={'auto'} poster={poster} className={classes.video}  controls >
                             <source src={muskOriginal} type="video/mp4"/>
                         </video>
                     </div>
@@ -76,7 +77,7 @@ const LipSyncSection = ({matches}) =>{
                 <div className={classes.videoContainer}>
                     <span className={classes.typeVideo}>Generated Video</span>
                     <div className={classes.borderVideo} key={choiceVideo + '1'}>
-                        <video className={classes.video} width={matches ? "204" : "316"} height={matches ? "275": "423"} controls >
+                        <video preload={'auto'} poster={poster} className={classes.video}  controls >
                             <source src={choiceVideo} type="video/mp4"/>
                         </video>
                     </div>

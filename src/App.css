@@ -54,7 +54,7 @@ picture, img{
 }
 
 .website{
-    max-width: 1280px;
+    max-width: 1140px;
     margin: 0 auto;
     padding: 0 24px;
 }
@@ -122,11 +122,15 @@ picture, img{
 }
 
 
-
-@media (max-width: 600px) {
-
+@media (max-width: 1024px) {
     .website{
+        padding: 0 80px;
+    }
+}
 
+@media (max-width: 768px) {
+    .website{
+        padding: 0 24px;
     }
     .animation-wrapper{
         width: 100% ;
@@ -150,7 +154,6 @@ picture, img{
         height: 400px ;
 
     }
-
-
 }
+
 

@@ -1,3 +1,20 @@
 .swiper-wrapper .swiper-slide {
     width: auto;
 }
+
+.swiper-wrapper .swiper-slide:first-child{
+    margin-left: 24px;
+}
+
+@media (max-width: 1024px) {
+    .swiper-wrapper .swiper-slide:first-child{
+        margin-left: 80px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .swiper-wrapper .swiper-slide:first-child{
+        margin-left: 24px !important;
+    }
+}
+

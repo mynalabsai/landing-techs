@@ -26,7 +26,7 @@ const VoiceConversionSection = (props) =>{
         [
             {audio : new Audio(test1), paused: true, label: 'Replicated Voice', name: 'Billie Eilish', type: 'first', image: eilish},
             {audio : new Audio(test1), paused: true, label: 'Input Voice', name: 'Female', type: 'withoutImage', image: biden},
-            {audio : new Audio(test1), paused: true, label: 'Replaced Voice', name: 'Billie Eilish', type: '', image: eilish},
+            {audio : new Audio(test1), paused: true, label: 'Replaced Voice', name: 'to Billie Eilish', type: '', image: eilish},
 
         ]
     )

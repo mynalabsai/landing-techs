@@ -34,7 +34,7 @@ const  VoicePeople = ({ index, matches, audios, setAudios}) =>{
     if(audios !== undefined)
 
         return(
-            <div className={classes.container} style={audios[index].type  !== 'first' && !matches ? {marginLeft: 50} : {marginLeft: 0}}>
+            <div className={classes.container} >
                 {audios[index].type !== 'withoutImage'
                     ?   <div className={classes.itemPeople}>
                             <img src={audios[index].image} className={classes.imagePeople} onClick={()=>{playAudio()}}/>
@@ -53,7 +53,7 @@ const  VoicePeople = ({ index, matches, audios, setAudios}) =>{
 
                 <div className={classes.text} style={audios[index].type === 'texttospeech' ? {marginLeft: 10} : {}}>
                     <span>{audios[index].label}</span>
-                    <span>{audios[index].name}</span>
+                    <span style={audios[index].type === 'texttospeech' ? {width: 190} : {}}>{audios[index].name}</span>
                 </div>
             </div>
         )
