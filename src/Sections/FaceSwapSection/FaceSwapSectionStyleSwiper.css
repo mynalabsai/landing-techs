@@ -2,9 +2,6 @@
     width: auto;
 }
 
-.swiper-wrapper .swiper-slide:first-child{
-    margin-left: 24px;
-}
 
 @media (max-width: 1024px) {
     .swiper-wrapper .swiper-slide:first-child{

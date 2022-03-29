@@ -50,14 +50,14 @@ const VoiceConversionSection = (props) =>{
                 <div className={classes.firstVoices} >
                     {audios1.map((audio,index)=>{
                         return(
-                            <VoicePeople matches={props.matches} index={index} audios={audios1} setAudios={setAudios1} />
+                            <VoicePeople matches={props.matches} index={index} audios={audios1} setAudios={setAudios1} audiosOther={audios2} setAudiosOther={setAudios2}/>
                         )
                     })}
                 </div>
                 <div className={classes.secondVoices}>
                     {audios2.map((audio,index)=>{
                         return(
-                            <VoicePeople matches={props.matches} index={index}  audios={audios2} setAudios={setAudios2}/>
+                            <VoicePeople matches={props.matches} index={index}  audios={audios2} setAudios={setAudios2} audiosOther={audios1} setAudiosOther={setAudios1}/>
                         )
                     })}
                 </div>

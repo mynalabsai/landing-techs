@@ -130,7 +130,7 @@ picture, img{
 
 @media (max-width: 768px) {
     .website{
-        padding: 0 24px;
+        padding: 15px 24px;
     }
     .animation-wrapper{
         width: 100% ;

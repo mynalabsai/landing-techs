@@ -9,7 +9,7 @@ import muskGenerated2 from '../../video/musk_celebration_noeffect.mp4'
 import arrow from '../../image/arrow.svg'
 import play from '../../image/playIcons/play.svg'
 import pause from '../../image/playIcons/pause.svg'
-import poster from "../../image/poster.jpg";
+import poster from '../../image/poster.png'
 
 const LipSyncSection = ({matches}) =>{
     const [choiceVideo, setChoiceVideo] = useState(muskGenerated1)

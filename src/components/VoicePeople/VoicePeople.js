@@ -5,15 +5,20 @@ import playIcon from '../../image/playIcons/play.svg'
 import pauseIcon from '../../image/playIcons/pause.svg'
 
 
-const  VoicePeople = ({ index, matches, audios, setAudios}) =>{
+const  VoicePeople = ({ index, matches, audios, setAudios, audiosOther, setAudiosOther}) =>{
     const [pausedAudio, setPausedAudio] = useState(true)
 
     const playAudio = () =>{
         let tempAudios = audios
+        let tempAudiosOther = audiosOther
         tempAudios.forEach((item)=>{
             item.audio.pause()
         })
+        tempAudiosOther.forEach((item)=>{
+            item.audio.pause()
+        })
         setAudios(tempAudios)
+        setAudiosOther(tempAudiosOther)
         if(audios[index].paused){
             console.log(index + 'play')
             audios[index].paused = false
@@ -31,10 +36,11 @@ const  VoicePeople = ({ index, matches, audios, setAudios}) =>{
 
 
 
+
     if(audios !== undefined)
 
         return(
-            <div className={classes.container} >
+            <div className={classes.container}>
                 {audios[index].type !== 'withoutImage'
                     ?   <div className={classes.itemPeople}>
                             <img src={audios[index].image} className={classes.imagePeople} onClick={()=>{playAudio()}}/>

@@ -11,7 +11,7 @@ import eilish from '../../image/people/img_eilish@2x.png'
 import grande from '../../image/people/img_grande@2x.png'
 import rock from '../../image/people/img_rock@2x.png'
 import zendaya from '../../image/people/img_zendaya@2x.png'
-import poster from '../../image/poster.jpg'
+import poster from '../../image/poster.png'
 
 //import swiper
 import { Swiper, SwiperSlide } from "swiper/react/swiper-react";
@@ -118,7 +118,7 @@ const FaceSwapSection = ({matches}) => {
                                     }
                                 </span>
                                 <div className={classes.borderVideo}>
-                                    <video preload={'auto'} poster={poster} className={classes.video} controls >
+                                    <video preload={'metadata'} poster={poster} className={classes.video} controls >
                                         <source src={slide.video} type="video/mp4"/>
                                     </video>
                                 </div>
