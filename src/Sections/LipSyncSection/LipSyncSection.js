@@ -6,6 +6,7 @@ import star from "../../image/VoiceConversion/star.svg";
 import muskOriginal from '../../video/muskOriganal.mp4'
 import muskGenerated1 from '../../video/muskGenerated.mp4'
 import muskGenerated2 from '../../video/musk_celebration_noeffect.mp4'
+import muskGenerated3 from '../../video/musk_celebration_noeffect.mp4'
 import arrow from '../../image/arrow.svg'
 import play from '../../image/playIcons/play.svg'
 import pause from '../../image/playIcons/pause.svg'
@@ -17,7 +18,7 @@ const LipSyncSection = ({matches}) =>{
     const choiceVideoRender = () =>{
         return(
             <div className={classes.choiceVideo}>
-                <span className={classes.typeVideo} style={{textAlign: 'center', marginBottom: 30}}>Input Audio</span>
+                <span className={classes.typeVideo} style={{textAlign: 'center', marginBottom: 22, width: '100%'}}>Input Audio</span>
                 <button className={choiceVideo === muskGenerated1 && classes.activeButton} onClick={()=>{
                     setChoiceVideo(muskGenerated1)
                 }}>
@@ -30,8 +31,8 @@ const LipSyncSection = ({matches}) =>{
                     <img src={play}/>
                     Donald Trump
                 </button>
-                <button onClick={()=>{
-
+                <button className={choiceVideo === muskGenerated3 && classes.activeButton} onClick={()=>{
+                    setChoiceVideo(muskGenerated3)
                 }}>
                     <img src={play}/>
                     Billie Eilish
@@ -59,11 +60,9 @@ const LipSyncSection = ({matches}) =>{
             <div className={classes.videos}>
                 <div className={classes.videoContainer}>
                     <span className={classes.typeVideo}>Original Video</span>
-                    <div className={classes.borderVideo}>
-                        <video preload={'auto'} poster={poster} className={classes.video}  controls >
-                            <source src={muskOriginal} type="video/mp4"/>
-                        </video>
-                    </div>
+                    <video muted playsinline preload={'auto'} poster={poster} className={classes.video}  controls={true} >
+                        <source src={muskOriginal} type="video/mp4"/>
+                    </video>
                 </div>
 
                 {!matches &&
@@ -76,14 +75,19 @@ const LipSyncSection = ({matches}) =>{
 
                 <div className={classes.videoContainer}>
                     <span className={classes.typeVideo}>Generated Video</span>
-                    <div className={classes.borderVideo} key={choiceVideo + '1'}>
-                        <video preload={'auto'} poster={poster} className={classes.video}  controls >
-                            <source src={choiceVideo} type="video/mp4"/>
-                        </video>
-                    </div>
+                    <video muted playsinline={true} preload={'auto'} poster={poster} className={classes.video}  controls key={choiceVideo + '1'}>
+                        <source src={choiceVideo} type="video/mp4"/>
+                    </video>
+
                 </div>
             </div>
-
+            <svg style={{position: 'fixed'}}>
+                <defs>
+                    <clipPath id="clippingLip">
+                        <rect width="274" height="423" rx="16"/>
+                    </clipPath>
+                </defs>
+            </svg>
         </div>
     )
 }

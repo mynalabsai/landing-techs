@@ -1,41 +1,41 @@
 @font-face {
-    font-family: 'TT Commons';
+    font-family: "TT Commons Bold";
     font-display: block;
     font-weight: 700;
-    src: url('./fonts/TT Commons Bold.otf');
-    src: local("TT Commons Bold");
+    font-style: normal;
+    src: url('fonts/TT Commons Bold.otf'), local('TT Commons Bold');
 }
 
 @font-face {
-    font-family: 'TT Commons';
+    font-family: "TT Commons Demibold";
     font-display: block;
     font-weight: 600;
-    src: url('./fonts/TT Commons DemiBold.otf');
-    src: local("TT Commons DemiBold");
+    font-style: normal;
+    src: url('fonts/TT Commons DemiBold.otf'), local("TT Commons DemiBold");
 }
 
 @font-face {
-    font-family: 'TT Commons';
+    font-family: "TT Commons Medium";
     font-weight: 500;
+    font-style: normal;
     font-display: block;
-    src: url('./fonts/TT Commons Medium.otf');
-    src: local("TT Commons Medium");
+    src: url('fonts/TT Commons Medium.otf'), local("TT Commons Medium");
 }
 
 @font-face {
-    font-family: 'TT Commons';
+    font-family: "TT Commons Regular";
     font-weight: 400;
+    font-style: normal;
     font-display: block;
-    src: url('./fonts/TT Commons Regular.otf');
-    src: local("TT Commons Regular");
+    src: url("fonts/TT Commons Regular.otf"), local("TT Commons Regular");
 }
 
 @font-face {
-    font-family: 'TT Commons', sans-serif;;
+    font-family: "TT Commons Thin";
     font-weight: 100;
+    font-style: normal;
     font-display: block;
-    src: url('./fonts/TT Commons Thin.otf');
-    src: local("TT Commons Thin");
+    src: url('fonts/TT Commons Thin.otf'), local("TT Commons Thin");
 }
 
 .container{
@@ -54,9 +54,9 @@ picture, img{
 }
 
 .website{
-    max-width: 1140px;
+    max-width: 1220px;
     margin: 0 auto;
-    padding: 0 24px;
+    padding: 0 80px;
 }
 
 .container {

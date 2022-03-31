@@ -2,7 +2,7 @@
 }
 
 .h2{
-    font-family: 'TT Commons', sans-serif;
+    font-family: 'TT Commons Bold', sans-serif;
     font-weight: 700;
     font-size: 110px;
     line-height: 104px;
@@ -12,7 +12,7 @@
 }
 
 .container p{
-    font-family: 'TT Commons', sans-serif;
+    font-family: 'TT Commons Regular', sans-serif;
     font-weight: 400;
     font-size: 26px;
     line-height: 30px;
@@ -23,7 +23,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    font-family: 'TT Commons', sans-serif;
+    font-family: 'TT Commons Demibold', sans-serif;
     font-weight: 600;
     font-size: 22px;
     line-height: 25px;
@@ -43,7 +43,7 @@
 
 .useCases span{
     margin-right: 20px;
-    font-family: 'TT Commons', sans-serif;
+    font-family: 'TT Commons Regular', sans-serif;
     font-weight: 400;
     font-size: 26px;
     line-height: 30px;

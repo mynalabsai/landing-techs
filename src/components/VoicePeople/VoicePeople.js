@@ -5,33 +5,41 @@ import playIcon from '../../image/playIcons/play.svg'
 import pauseIcon from '../../image/playIcons/pause.svg'
 
 
-const  VoicePeople = ({ index, matches, audios, setAudios, audiosOther, setAudiosOther}) =>{
+const  VoicePeople = ({ index, audios, setAudios, audiosOther, setAudiosOther}) =>{
     const [pausedAudio, setPausedAudio] = useState(true)
 
     const playAudio = () =>{
-        let tempAudios = audios
-        let tempAudiosOther = audiosOther
-        tempAudios.forEach((item)=>{
+        let tempAudios = [...audios]
+        let tempAudiosOther = [...audiosOther]
+        tempAudios.forEach((item, indexItem)=>{
             item.audio.pause()
+            if(indexItem !== index)
+                item.paused = true
+
         })
         tempAudiosOther.forEach((item)=>{
             item.audio.pause()
+            item.paused = true
         })
-        setAudios(tempAudios)
-        setAudiosOther(tempAudiosOther)
+
         if(audios[index].paused){
-            console.log(index + 'play')
             audios[index].paused = false
             setPausedAudio(false)
             audios[index].audio.play();
         }
         else{
-            console.log(index + 'pause')
             audios[index].paused = true
             setPausedAudio(true)
             audios[index].audio.pause()
         }
+        setAudios(tempAudios)
+        setAudiosOther(tempAudiosOther)
+
     }
+
+    useEffect(()=>{
+        setPausedAudio(audios[index].paused)
+    },[audios[index].paused])
 
 
 

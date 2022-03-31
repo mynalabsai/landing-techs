@@ -1,5 +1,5 @@
 .h2{
-    font-family: 'TT Commons', sans-serif;
+    font-family: 'TT Commons Bold', sans-serif;
     font-weight: 700;
     font-size: 110px;
     line-height: 104px;
@@ -9,7 +9,7 @@
 }
 
 .container p{
-    font-family: 'TT Commons', sans-serif;
+    font-family: 'TT Commons Regular', sans-serif;
     font-weight: 400;
     font-size: 26px;
     line-height: 30px;
@@ -50,7 +50,7 @@
 }
 
 .itemBlocksMobile span{
-    font-family: 'TT Commons', sans-serif;
+    font-family: 'TT Commons Regular', sans-serif;
     font-weight: 400;
     margin-top: 12px;
     font-size: 34px;
@@ -63,7 +63,7 @@
 }
 
 .itemBlocksMobile ul li {
-    font-family: 'TT Commons', sans-serif;
+    font-family: 'TT Commons Regular', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 26px;
