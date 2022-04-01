@@ -67,9 +67,15 @@
     max-height: 100%;
     opacity: 1;
     transition-duration: .2s;
-    clip-path: url('#clippingLip');
     border-radius: 16px;
     margin-top: 12px;
+}
+
+.borderVideo{
+    position: relative;
+    clip-path: url('#clippingLip');
+    border-radius: 16px;
+
 }
 
 .typeVideo{
@@ -116,12 +122,24 @@
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.132) 0%, rgba(0, 0, 0, 0.22) 100%) !important;
 }
 
+.overlayVideo{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    z-index: 2000;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+}
+
 @media (max-width: 1100px) {
     .arrow{
         display: none;
     }
-
-
 
     .video{
         max-width: 270px;
@@ -149,7 +167,7 @@
     .typeVideo{
         width: 150px;
     }
-    .video{
+    .borderVideo{
         max-width: 150px;
     }
 }
@@ -205,5 +223,7 @@
         width: 30px;
         margin-right: 8px;
     }
+
+
 
 }

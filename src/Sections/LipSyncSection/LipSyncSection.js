@@ -6,9 +6,10 @@ import star from "../../image/VoiceConversion/star.svg";
 import muskOriginal from '../../video/muskOriganal.mp4'
 import muskGenerated1 from '../../video/muskGenerated.mp4'
 import muskGenerated2 from '../../video/musk_celebration_noeffect.mp4'
-import muskGenerated3 from '../../video/musk_celebration_noeffect.mp4'
+import muskGenerated3 from '../../video/Trump_Talk_41.mp4'
 import arrow from '../../image/arrow.svg'
 import play from '../../image/playIcons/play.svg'
+import playWhite from '../../image/playIcons/playWhite.svg'
 import pause from '../../image/playIcons/pause.svg'
 import poster from '../../image/poster.png'
 
@@ -60,9 +61,19 @@ const LipSyncSection = ({matches}) =>{
             <div className={classes.videos}>
                 <div className={classes.videoContainer}>
                     <span className={classes.typeVideo}>Original Video</span>
-                    <video muted playsinline preload={'auto'} poster={poster} className={classes.video}  controls={true} >
-                        <source src={muskOriginal} type="video/mp4"/>
-                    </video>
+                    <div className={classes.borderVideo}>
+                        <video muted playsinline preload={'auto'} poster={poster} className={classes.video}  controls={true} id={muskOriginal} >
+                            <source src={muskOriginal} type="video/mp4"/>
+                        </video>
+                        <div className={classes.overlayVideo} id={'overlay' + muskOriginal} style={{backgroundImage: `url(${poster})`, }} onClick={()=>{
+                            let video = document.getElementById(muskOriginal);
+                            video.play()
+                            let overlay = document.getElementById('overlay' + muskOriginal);
+                            overlay.style.display = 'none'
+                        }}>
+                            <img src={playWhite} alt="play"/>
+                        </div>
+                    </div>
                 </div>
 
                 {!matches &&
@@ -75,9 +86,19 @@ const LipSyncSection = ({matches}) =>{
 
                 <div className={classes.videoContainer}>
                     <span className={classes.typeVideo}>Generated Video</span>
-                    <video muted playsinline={true} preload={'auto'} poster={poster} className={classes.video}  controls key={choiceVideo + '1'}>
-                        <source src={choiceVideo} type="video/mp4"/>
-                    </video>
+                    <div className={classes.borderVideo}>
+                        <video muted playsinline={true} preload={'auto'} poster={poster} className={classes.video} controls id={choiceVideo} key={choiceVideo}>
+                            <source src={choiceVideo} type="video/mp4"/>
+                        </video>
+                        <div className={classes.overlayVideo} id={'overlay' + choiceVideo} style={{backgroundImage: `url(${poster})`, }} onClick={()=>{
+                            let video = document.getElementById(choiceVideo);
+                            video.play()
+                            let overlay = document.getElementById('overlay' + choiceVideo);
+                            overlay.style.display = 'none'
+                        }}>
+                            <img src={playWhite} alt="play"/>
+                        </div>
+                    </div>
 
                 </div>
             </div>

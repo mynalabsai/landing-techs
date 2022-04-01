@@ -3,7 +3,18 @@ import classes from './FaceSwapSection.module.css'
 import './FaceSwapSectionStyleSwiper.css'
 
 //import assets
-import testVideo from '../../video/muskOriganal.mp4'
+import musk from '../../video/muskOriganal.mp4'
+import Zendaya from '../../video/Zendaya_Cool_52.mp4'
+import Eilish from '../../video/Eilish_Think_15.mp4'
+import Grande from '../../video/Grande_Talk_27.mp4'
+import Chalamet from '../../video/Chalamet_Talk_16.mp4'
+import Reeves from '../../video/Reeves_Talk_6.mp4'
+import Kim from '../../video/Kim_Talk_36.mp4'
+import Trump from '../../video/Trump_Talk_41.mp4'
+
+import play from '../../image/playIcons/playWhite.svg'
+
+
 import star from "../../image/VoiceConversion/star.svg";
 import dicaprio from '../../image/people/img_dicaprio@2x.png'
 import elon from '../../image/people/img_elon@2x.png'
@@ -17,20 +28,21 @@ import poster from '../../image/poster.png'
 import { Swiper, SwiperSlide } from "swiper/react/swiper-react";
 import 'swiper/swiper.min.css';
 import 'swiper/modules/navigation/navigation.min.css';
+import * as url from "url";
 
 
 const FaceSwapSection = ({matches}) => {
     const slides1 = [
-        {video: testVideo},
-        {video: testVideo, imageTitle: dicaprio},
-        {video: testVideo, imageTitle: rock},
-        {video: testVideo, imageTitle: elon},
+        {video: Zendaya},
+        {video: Eilish, imageTitle: dicaprio},
+        {video: Grande, imageTitle: rock},
+        {video: musk, imageTitle: elon},
     ];
     const slides2 = [
-        {video: testVideo},
-        {video: testVideo, imageTitle: grande},
-        {video: testVideo, imageTitle: eilish},
-        {video: testVideo, imageTitle: zendaya},
+        {video: Chalamet},
+        {video: Reeves, imageTitle: grande},
+        {video: Kim, imageTitle: eilish},
+        {video: Trump, imageTitle: zendaya},
     ];
 
 
@@ -130,9 +142,17 @@ const FaceSwapSection = ({matches}) => {
                                     }
                                 </span>
                                         <div className={classes.borderVideo}>
-                                            <video preload={'auto'} poster={poster}  className={classes.video} controls >
+                                            <video preload={'auto'} poster={poster}  className={classes.video} controls id={slide.video}>
                                                 <source src={slide.video} type="video/mp4"/>
                                             </video>
+                                            <div className={classes.overlayVideo} id={'overlay' + slide.video} style={{backgroundImage: `url(${poster})`, }} onClick={()=>{
+                                                let video = document.getElementById(slide.video);
+                                                video.play()
+                                                let overlay = document.getElementById('overlay' + slide.video);
+                                                overlay.style.display = 'none'
+                                            }}>
+                                                <img src={play} alt="play"/>
+                                            </div>
                                             <svg>
                                                 <defs>
                                                     <clipPath id="clipping">
@@ -167,18 +187,27 @@ const FaceSwapSection = ({matches}) => {
                             (slide, index) => (
                                 <SwiperSlide className={classes.swiperSlide}>
                                     <div className={classes.videoContainer}>
-                                <span className={classes.titleVideo}>
-                                    {index === 0
-                                        ? <span className={classes.textTitleVideo}>Female • Original</span>
-                                        : <div className={classes.imageTitleVideo}>
-                                            <img src={slide.imageTitle} alt={'imgSwiper'}/>
-                                        </div>
-                                    }
-                                </span>
+                                        <span className={classes.titleVideo}>
+                                            {index === 0
+                                                ? <span className={classes.textTitleVideo}>Female • Original</span>
+                                                : <div className={classes.imageTitleVideo}>
+                                                    <img src={slide.imageTitle} alt={'imgSwiper'}/>
+                                                </div>
+                                            }
+                                        </span>
                                         <div className={classes.borderVideo}>
-                                            <video preload={'metadata'} poster={poster} className={classes.video} controls >
+                                            <video preload={'auto'} poster={poster}  className={classes.video} controls id={slide.video}>
                                                 <source src={slide.video} type="video/mp4"/>
                                             </video>
+                                            <div className={classes.overlayVideo} id={'overlay' + slide.video} style={{backgroundImage: `url(${poster})`, }} onClick={()=>{
+                                                console.log(123)
+                                                let video = document.getElementById(slide.video);
+                                                video.play()
+                                                let overlay = document.getElementById('overlay' + slide.video);
+                                                overlay.style.display = 'none'
+                                            }}>
+                                                <img src={play} alt="play"/>
+                                            </div>
                                         </div>
                                     </div>
                                 </SwiperSlide>
