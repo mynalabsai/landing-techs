@@ -62,7 +62,7 @@ const LipSyncSection = ({matches}) =>{
                 <div className={classes.videoContainer}>
                     <span className={classes.typeVideo}>Original Video</span>
                     <div className={classes.borderVideo}>
-                        <video muted playsinline preload={'auto'} poster={poster} className={classes.video}  controls={true} id={muskOriginal} >
+                        <video muted  preload={'auto'} poster={poster} className={classes.video}  controls={true} id={muskOriginal} >
                             <source src={muskOriginal} type="video/mp4"/>
                         </video>
                         <div className={classes.overlayVideo} id={'overlay' + muskOriginal} style={{backgroundImage: `url(${poster})`, }} onClick={()=>{
@@ -87,7 +87,7 @@ const LipSyncSection = ({matches}) =>{
                 <div className={classes.videoContainer}>
                     <span className={classes.typeVideo}>Generated Video</span>
                     <div className={classes.borderVideo}>
-                        <video muted playsinline={true} preload={'auto'} poster={poster} className={classes.video} controls id={choiceVideo} key={choiceVideo}>
+                        <video muted preload={'auto'} poster={poster} className={classes.video} controls id={choiceVideo} key={choiceVideo}>
                             <source src={choiceVideo} type="video/mp4"/>
                         </video>
                         <div className={classes.overlayVideo} id={'overlay' + choiceVideo} style={{backgroundImage: `url(${poster})`, }} onClick={()=>{

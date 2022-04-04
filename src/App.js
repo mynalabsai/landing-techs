@@ -30,11 +30,10 @@ const App = () => {
     }
 
     useEffect(()=>{
+        startAnimateDots()
         window
             .matchMedia("(max-width: 768px)")
             .addEventListener('change', e => setMatches( e.matches ));
-        startAnimateDots()
-
     },[])
 
 
@@ -42,7 +41,7 @@ const App = () => {
     return (
         <div className={'app'} id={'app'}>
             <div className={'container'}>
-                <div className="animation-wrapper">
+                <div className="animation-wrapper" >
                     <div className="stagger-visualizer">
                         <div className="dots-wrapper"></div>
                     </div>
