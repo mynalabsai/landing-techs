@@ -59,6 +59,7 @@
 .videoContainer{
     display: flex;
     flex-direction: column;
+
 }
 
 .video{
@@ -68,14 +69,14 @@
     opacity: 1;
     transition-duration: .2s;
     border-radius: 16px;
-    margin-top: 12px;
+
 }
 
 .borderVideo{
     position: relative;
     clip-path: url('#clippingLip');
     border-radius: 16px;
-
+    margin-top: 12px;
 }
 
 .typeVideo{
