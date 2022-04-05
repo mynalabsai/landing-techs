@@ -19,7 +19,7 @@ const WorkOnMobile = () => {
             <div className={classes.blocksMobile}>
                 <div className={classes.itemBlocksMobile}>
                     <img src={faceSwapIcon} alt="faceSwapIcon"/>
-                    <span>Face Swap</span>
+                    <span><b>Face Swap</b></span>
                     <ul>
                         <li>State-of-the-art</li>
                         <li>25 FPS on iPhone 11+</li>
@@ -27,7 +27,7 @@ const WorkOnMobile = () => {
                 </div>
                 <div className={classes.itemBlocksMobile}>
                     <img src={lipSyncIcon} alt="lipSyncIcon"/>
-                    <span>LipSync</span>
+                    <span><b>LipSync</b></span>
                     <ul>
                         <li>State-of-the-art</li>
                         <li>25 FPS on iPhone 11+</li>
@@ -35,7 +35,7 @@ const WorkOnMobile = () => {
                 </div>
                 <div className={classes.itemBlocksMobile}>
                     <img src={voiceConversionIcon} alt="voiceConversionIcon"/>
-                    <span>Voice Conversion</span>
+                    <span><b>Voice Conversion</b></span>
                     <ul>
                         <li>State-of-the-art</li>
                         <li>25 FPS on iPhone 11+</li>

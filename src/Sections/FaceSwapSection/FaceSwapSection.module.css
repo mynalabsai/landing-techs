@@ -205,12 +205,14 @@
     .borderVideo{
         width: 168px;
         height: 275px;
-
+        border-radius: 16px;
     }
 
     .video{
         width: 204px;
         height: 275px;
+        border-radius: 16px;
+
     }
 
     .mySwiper div div:not(:first-child) div .borderVideo{
@@ -247,6 +249,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        border-radius: 16px;
     }
 
     .overlayVideo img{

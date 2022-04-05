@@ -142,13 +142,13 @@ const FaceSwapSection = ({matches}) => {
                                     }
                                 </span>
                                         <div className={classes.borderVideo}>
-                                            <video preload={'auto'} poster={poster}  className={classes.video} controls id={slide.video}>
+                                            <video preload={'auto'} poster={poster}  className={classes.video} controls id={slide.video + 'swiper'}>
                                                 <source src={slide.video} type="video/mp4"/>
                                             </video>
-                                            <div className={classes.overlayVideo} id={'overlay' + slide.video} style={{backgroundImage: `url(${poster})`, }} onClick={()=>{
-                                                let video = document.getElementById(slide.video);
+                                            <div className={classes.overlayVideo} id={'overlaySwiper' + slide.video} style={{backgroundImage: `url(${poster})`, }} onClick={()=>{
+                                                let video = document.getElementById(slide.video + 'swiper');
                                                 video.play()
-                                                let overlay = document.getElementById('overlay' + slide.video);
+                                                let overlay = document.getElementById('overlaySwiper' + slide.video);
                                                 overlay.style.display = 'none'
                                             }}>
                                                 <img src={play} alt="play"/>

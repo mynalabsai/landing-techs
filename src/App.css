@@ -46,6 +46,11 @@ a{
     color: inherit;
 }
 
+b{
+    font-family: 'TT Commons', sans-serif;
+    font-weight: 600 ;
+}
+
 picture, img{
     -moz-user-select: none;
     -webkit-user-select: none;
