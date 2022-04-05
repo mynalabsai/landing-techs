@@ -1,41 +1,41 @@
 @font-face {
-    font-family: "TT Commons Bold";
+    font-family: "TT Commons";
     font-display: block;
     font-weight: 700;
     font-style: normal;
-    src: url('fonts/TT Commons Bold.otf'), local('TT Commons Bold');
+    src: local("TT Commons Bold"), local("TTCommons-Bold"),url('fonts/TT Commons Bold.otf');
 }
 
 @font-face {
-    font-family: "TT Commons Demibold";
+    font-family: "TT Commons";
     font-display: block;
     font-weight: 600;
     font-style: normal;
-    src: url('fonts/TT Commons DemiBold.otf'), local("TT Commons DemiBold");
+    src: local("TT Commons Demibold"), local("TTCommons-Demibold"),url('fonts/TT Commons DemiBold.otf');
 }
 
 @font-face {
-    font-family: "TT Commons Medium";
+    font-family: "TT Commons";
     font-weight: 500;
     font-style: normal;
     font-display: block;
-    src: url('fonts/TT Commons Medium.otf'), local("TT Commons Medium");
+    src: local("TT Commons Medium"), local("TTCommons-Medium"),url('fonts/TT Commons Medium.otf');
 }
 
 @font-face {
-    font-family: "TT Commons Regular";
+    font-family: "TT Commons";
     font-weight: 400;
     font-style: normal;
     font-display: block;
-    src: url("fonts/TT Commons Regular.otf"), local("TT Commons Regular");
+    src: local("TT Commons Regular"), local("TTCommons-Regular"), url("fonts/TT Commons Regular.otf");
 }
 
 @font-face {
-    font-family: "TT Commons Thin";
+    font-family: "TT Commons";
     font-weight: 100;
     font-style: normal;
     font-display: block;
-    src: url('fonts/TT Commons Thin.otf'), local("TT Commons Thin");
+    src: local("TT Commons Thin"), local("TTCommons-Thin"),url('fonts/TT Commons Thin.otf');
 }
 
 .container{
@@ -66,10 +66,9 @@ picture, img{
 
 
 .animation-wrapper {
-
     margin-left: 5%;
     width: 90%;
-    padding-bottom: 40%;
+    padding-bottom: 35%;
     opacity: 0.6;
     position: absolute;
     z-index: -1;
@@ -85,6 +84,7 @@ picture, img{
             linear-gradient(to right, var(--grad)),
             linear-gradient(to bottom, var(--grad));
     mask-composite: intersect;
+
 }
 
 .stagger-visualizer {

@@ -9,12 +9,23 @@ const  VoicePeople = ({ index, audios, setAudios, audiosOther, setAudiosOther}) 
     const [pausedAudio, setPausedAudio] = useState(true)
 
     const playAudio = () =>{
+        if(audios[index].paused){
+            setPausedAudio(false)
+            audios[index].paused = false
+            audios[index].audio.play();
+        }
+        else{
+            setPausedAudio(true)
+            audios[index].paused = true
+            audios[index].audio.pause()
+        }
         let tempAudios = [...audios]
         let tempAudiosOther = [...audiosOther]
         tempAudios.forEach((item, indexItem)=>{
-            item.audio.pause()
-            if(indexItem !== index)
+            if(indexItem !== index){
+                item.audio.pause()
                 item.paused = true
+            }
 
         })
         tempAudiosOther.forEach((item)=>{
@@ -22,25 +33,13 @@ const  VoicePeople = ({ index, audios, setAudios, audiosOther, setAudiosOther}) 
             item.paused = true
         })
 
-        if(audios[index].paused){
-            audios[index].paused = false
-            setPausedAudio(false)
-            audios[index].audio.play();
-        }
-        else{
-            audios[index].paused = true
-            setPausedAudio(true)
-            audios[index].audio.pause()
-        }
         setAudios(tempAudios)
         setAudiosOther(tempAudiosOther)
-
     }
 
     useEffect(()=>{
         setPausedAudio(audios[index].paused)
     },[audios[index].paused])
-
 
 
 

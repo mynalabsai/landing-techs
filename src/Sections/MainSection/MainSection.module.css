@@ -5,7 +5,7 @@
 
 .imageGroup{
     margin-left: 24px;
-
+    width: 550px;
 }
 
 .imageGroup img{
@@ -14,7 +14,7 @@
 }
 
 .h2{
-    font-family: 'TT Commons Bold', sans-serif;
+    font-family: 'TT Commons', sans-serif;
     font-weight: 700;
     font-size: 110px;
     line-height: 104px;
@@ -39,6 +39,7 @@
 
     .imageGroup{
         margin: 0 auto;
+        width: 295px;
     }
 
     .imageGroup img{

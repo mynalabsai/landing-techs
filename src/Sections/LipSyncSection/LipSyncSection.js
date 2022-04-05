@@ -13,8 +13,42 @@ import playWhite from '../../image/playIcons/playWhite.svg'
 import pause from '../../image/playIcons/pause.svg'
 import poster from '../../image/poster.png'
 
+//import audio
+import test1 from "../../audio/test.mp3";
+import test2 from "../../audio/test.mp3";
+import test3 from "../../audio/test.mp3";
+
 const LipSyncSection = ({matches}) =>{
     const [choiceVideo, setChoiceVideo] = useState(muskGenerated1)
+    const [audios, setAudios] = useState(
+        [
+            {audio : new Audio(test1), paused: true},
+            {audio : new Audio(test2), paused: true},
+            {audio : new Audio(test3), paused: true},
+        ]
+    )
+
+    const playAudio = (index) =>{
+        if(audios[index].paused){
+            audios[index].paused = false
+            audios[index].audio.play();
+        }
+        else{
+            audios[index].paused = true
+            audios[index].audio.pause()
+        }
+        let tempAudios = [...audios]
+        tempAudios.forEach((item, indexItem)=>{
+            if(indexItem !== index){
+                item.audio.pause()
+                item.paused = true
+            }
+
+        })
+
+        setAudios(tempAudios)
+
+    }
 
     const choiceVideoRender = () =>{
         return(
@@ -23,20 +57,26 @@ const LipSyncSection = ({matches}) =>{
                 <button className={choiceVideo === muskGenerated1 && classes.activeButton} onClick={()=>{
                     setChoiceVideo(muskGenerated1)
                 }}>
-                    <img src={play}/>
-                    Barack Obama
+                    {audios[0].paused
+                        ?<img src={play} onClick={()=>{playAudio(0)}}/>
+                        :<img src={pause} onClick={()=>{playAudio(0)}}/>}
+                    <span>Barack Obama</span>
                 </button>
                 <button className={choiceVideo === muskGenerated2 && classes.activeButton} onClick={()=>{
                     setChoiceVideo(muskGenerated2)
                 }}>
-                    <img src={play}/>
-                    Donald Trump
+                    {audios[1].paused
+                        ?<img src={play} onClick={()=>{playAudio(1)}}/>
+                        :<img src={pause} onClick={()=>{playAudio(1)}}/>}
+                    <span>Donald Trump</span>
                 </button>
                 <button className={choiceVideo === muskGenerated3 && classes.activeButton} onClick={()=>{
                     setChoiceVideo(muskGenerated3)
                 }}>
-                    <img src={play}/>
-                    Billie Eilish
+                    {audios[2].paused
+                        ?<img src={play}  onClick={()=>{playAudio(2)}}/>
+                        :<img src={pause}  onClick={()=>{playAudio(2)}}/>}
+                    <span>Billie Eilish</span>
                 </button>
             </div>
         )

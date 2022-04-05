@@ -3,8 +3,18 @@ import classes from './NLPSection.module.css'
 
 //import assets
 import star from "../../image/VoiceConversion/star.svg";
-import angel from '../../image/emoj/angel.svg'
-import rotateSmile from '../../image/emoj/rotateSmile.svg'
+import emoji_saintPng from '../../image/emoj/emoji_saint.png'
+import emoji_saintPng2x from '../../image/emoj/emoji_saint@2x.png'
+import emoji_saintPng4x from '../../image/emoj/emoji_saint@4x.png'
+import emoji_saintWebp from '../../image/emoj/emoji_saint.webp'
+import emoji_saintWebp2x from '../../image/emoj/emoji_saint@2x.webp'
+import emoji_saintWebp4x from '../../image/emoj/emoji_saint@4x.webp'
+import emoji_upside_downPng from '../../image/emoj/emoji_upside_down.png'
+import emoji_upside_downPng2x from '../../image/emoj/emoji_upside_down@2x.png'
+import emoji_upside_downPng4x from '../../image/emoj/emoji_upside_down@4x.png'
+import emoji_upside_downWebp from '../../image/emoj/emoji_upside_down.webp'
+import emoji_upside_downWebp2x from '../../image/emoj/emoji_upside_down@2x.webp'
+import emoji_upside_downWebp4x from '../../image/emoj/emoji_upside_down@4x.webp'
 
 const NLPSection = () => {
   return(
@@ -26,8 +36,34 @@ const NLPSection = () => {
           <div className={classes.messages}>
             <div><span>Hey, Alex! How is your school today?</span></div>
             <div><span>I missed it for today, so sick of my homework</span></div>
-            <div><span>Just chilling in TikTok <img src={rotateSmile} alt=""/></span></div>
-            <div><span>Oh, such a good day! Haha <img src={angel} alt=""/></span></div>
+            <div><span>Just chilling in TikTok
+                <picture>
+                    <source type="image/webp" media="(min-width: 1919px)" srcSet={emoji_saintWebp4x}/>
+                    <source type="image/png" media="(min-width: 1919px)" srcSet={emoji_saintPng4x}/>
+
+                    <source type="image/webp" media="(max-width: 1280px)" srcSet={emoji_saintWebp2x}/>
+                    <source type="image/png" media="(max-width: 1280px)" srcSet={emoji_saintPng2x}/>
+
+                    <source type="image/webp" media="(max-width: 768px)" srcSet={emoji_saintWebp}/>
+                    <source type="image/png" media="(max-width: 768px)" srcSet={emoji_saintPng}/>
+
+                    <img src={emoji_saintWebp4x} alt="emoji_saint"/>
+                </picture>
+            </span></div>
+            <div><span>Oh, such a good day! Haha
+                <picture>
+                    <source type="image/webp" media="(min-width: 1919px)" srcSet={emoji_upside_downWebp4x}/>
+                    <source type="image/png" media="(min-width: 1919px)" srcSet={emoji_upside_downPng4x}/>
+
+                    <source type="image/webp" media="(max-width: 1280px)" srcSet={emoji_upside_downWebp2x}/>
+                    <source type="image/png" media="(max-width: 1280px)" srcSet={emoji_upside_downPng2x}/>
+
+                    <source type="image/webp" media="(max-width: 768px)" srcSet={emoji_upside_downWebp}/>
+                    <source type="image/png" media="(max-width: 768px)" srcSet={emoji_upside_downPng}/>
+
+                    <img src={emoji_upside_downWebp4x} alt="emoji_saint"/>
+                </picture>
+            </span></div>
           </div>
       </div>
   )
