@@ -54,30 +54,32 @@ const LipSyncSection = ({matches}) =>{
         return(
             <div className={classes.choiceVideo}>
                 <span className={classes.typeVideo} style={{textAlign: 'center', marginBottom: 22, width: '100%'}}>Input Audio</span>
-                <button className={choiceVideo === muskGenerated1 && classes.activeButton} onClick={()=>{
-                    setChoiceVideo(muskGenerated1)
-                }}>
-                    {audios[0].paused
-                        ?<img src={play} onClick={()=>{playAudio(0)}}/>
-                        :<img src={pause} onClick={()=>{playAudio(0)}}/>}
-                    <span>Barack Obama</span>
-                </button>
-                <button className={choiceVideo === muskGenerated2 && classes.activeButton} onClick={()=>{
-                    setChoiceVideo(muskGenerated2)
-                }}>
-                    {audios[1].paused
-                        ?<img src={play} onClick={()=>{playAudio(1)}}/>
-                        :<img src={pause} onClick={()=>{playAudio(1)}}/>}
-                    <span>Donald Trump</span>
-                </button>
-                <button className={choiceVideo === muskGenerated3 && classes.activeButton} onClick={()=>{
-                    setChoiceVideo(muskGenerated3)
-                }}>
-                    {audios[2].paused
-                        ?<img src={play}  onClick={()=>{playAudio(2)}}/>
-                        :<img src={pause}  onClick={()=>{playAudio(2)}}/>}
-                    <span>Billie Eilish</span>
-                </button>
+                <div className={classes.containerBtn}>
+                    <button className={choiceVideo === muskGenerated1 && classes.activeButton} onClick={()=>{
+                        setChoiceVideo(muskGenerated1)
+                    }}>
+                        {audios[0].paused
+                            ?<img src={play} onClick={()=>{playAudio(0)}}/>
+                            :<img src={pause} onClick={()=>{playAudio(0)}}/>}
+                        <span>Barack Obama</span>
+                    </button>
+                    <button className={choiceVideo === muskGenerated2 && classes.activeButton} onClick={()=>{
+                        setChoiceVideo(muskGenerated2)
+                    }}>
+                        {audios[1].paused
+                            ?<img src={play} onClick={()=>{playAudio(1)}}/>
+                            :<img src={pause} onClick={()=>{playAudio(1)}}/>}
+                        <span>Donald Trump</span>
+                    </button>
+                    <button className={choiceVideo === muskGenerated3 && classes.activeButton} onClick={()=>{
+                        setChoiceVideo(muskGenerated3)
+                    }}>
+                        {audios[2].paused
+                            ?<img src={play}  onClick={()=>{playAudio(2)}}/>
+                            :<img src={pause}  onClick={()=>{playAudio(2)}}/>}
+                        <span>Billie Eilish</span>
+                    </button>
+                </div>
             </div>
         )
     }
@@ -124,7 +126,7 @@ const LipSyncSection = ({matches}) =>{
                 </>
                 }
 
-                <div className={classes.videoContainer}>
+                <div className={classes.videoContainer} style={{marginLeft: 24}}>
                     <span className={classes.typeVideo}>Generated Video</span>
                     <div className={classes.borderVideo}>
                         <video muted preload={'auto'} poster={poster} className={classes.video} controls id={choiceVideo} key={choiceVideo}>

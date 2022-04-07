@@ -14,6 +14,7 @@
     font-size: 26px;
     line-height: 30px;
     color: #000000;
+    padding-bottom: 36px;
 }
 
 .useCasesTitle{
@@ -75,6 +76,7 @@
     width: 94%;
     height: auto;
     max-height: 100%;
+    cursor: pointer;
 }
 
 .voicesVideo div:not(:first-child) video{
@@ -110,6 +112,7 @@
     overflow: hidden;
     margin-top: 12px;
     position: relative;
+    cursor: pointer;
 }
 
 
@@ -121,6 +124,7 @@
     transition-duration: .2s;
     width: 316px;
     height: 423px;
+    cursor: pointer;
 }
 
 .mySwiper div div:not(:first-child) div div video{
@@ -212,7 +216,7 @@
         width: 204px;
         height: 275px;
         border-radius: 16px;
-
+        cursor: pointer;
     }
 
     .mySwiper div div:not(:first-child) div .borderVideo{
@@ -230,7 +234,7 @@
     .mySwiper{
         margin-top: 20px;
         left: -24px;
-        padding-left: 24px;
+
         width: calc(100% + 48px);
     }
 
@@ -250,6 +254,7 @@
         align-items: center;
         justify-content: center;
         border-radius: 16px;
+        cursor: pointer;
     }
 
     .overlayVideo img{

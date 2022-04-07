@@ -36,7 +36,7 @@ const MainSections = () =>{
 
             </div>
             <h2 className={classes.h2}>
-                Industry-Leading Tech <br/>to Achieve Results
+                Industry-Leading Tech to Achieve Results
             </h2>
             <div className={classes.whiteBlocksAnchor}>
                 <WhiteBlock image={voice} text={'Voice Conversion'} anchor={'#voiceconversion'} />

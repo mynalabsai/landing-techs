@@ -17,6 +17,7 @@
     font-size: 26px;
     line-height: 30px;
     color: #000000;
+    padding-bottom: 36px;
 }
 
 .useCasesTitle{
@@ -111,7 +112,6 @@
     .voices{
         flex-direction: row;
         flex-wrap: nowrap;
-        margin-top: 18px;
         justify-content: center;
 
     }
@@ -119,11 +119,11 @@
     .firstVoices, .secondVoices{
         flex-direction: column;
         margin-top: 0;
-
+        width: 50%;
     }
 
     .secondVoices{
-        margin-left: 0;
+        margin-left: 24px;
     }
 }
 

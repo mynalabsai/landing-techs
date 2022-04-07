@@ -38,8 +38,7 @@
     src: local("TT Commons Thin"), local("TTCommons-Thin"),url('fonts/TT Commons Thin.otf');
 }
 
-.container{
-}
+
 
 a{
     text-decoration: none;
@@ -66,14 +65,14 @@ picture, img{
 
 .container {
     width: 100%;
-    padding-bottom: 160px;
+    padding-bottom: 120px;
 }
 
 
 .animation-wrapper {
     margin-left: 5%;
     width: 90%;
-    padding-bottom: 35%;
+    padding-bottom: 26%;
     opacity: 0.6;
     position: absolute;
     z-index: -1;

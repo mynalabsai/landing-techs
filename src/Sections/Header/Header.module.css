@@ -9,6 +9,7 @@
 
 .logo{
     width: 178px;
+    height: 40px;
     cursor: pointer;
     transition: .3s;
 }
