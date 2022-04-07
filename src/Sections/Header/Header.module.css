@@ -66,6 +66,8 @@
         display: none;
     }
     .mobileEmail{
-        display: block;
+
+        display: flex;
+        margin-bottom: -6px;
     }
 }
