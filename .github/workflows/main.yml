@@ -1,0 +1,103 @@
+name: Build
+on:
+  push
+
+env:
+  GITHUB_SHA: ${{ github.sha }}
+  GITHUB_REF: ${{ github.ref }}
+  GCP_KEY: ${{ secrets.GCP_KEY }}
+  ACTIONS_ALLOW_UNSECURE_COMMANDS: true
+  DOCKER_REGISTRY: europe-west3-docker.pkg.dev/overdubdev/overdub
+  DOCKER_IMAGE: landing-techs
+
+jobs:
+  build:
+    name: 'Building distributive'
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Checkout code'
+        uses: actions/checkout@v2
+
+      - name: 'Setup node'
+        uses: actions/setup-node@v3
+        with:
+          node-version: "16"
+
+      - name: 'Install dependencies'
+        run: npm install
+
+      - name: 'Build'
+        run: npm run build
+
+      - name: 'Upload distributive to artifact registry'
+        uses: actions/upload-artifact@v3
+        with:
+          name: distributive
+          path: build
+          if-no-files-found: error
+          retention-days: 7
+
+  containerization:
+    name: 'Сontainerization'
+    needs:
+      - build
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Checkout code'
+        uses: actions/checkout@v2
+
+      - name: 'Login gcloud'
+        uses: 'google-github-actions/auth@v0'
+        with:
+          credentials_json: '${{ secrets.GCP_KEY }}'
+
+      - name: 'Set up Cloud SDK'
+        uses: 'google-github-actions/setup-gcloud@v0'
+
+      - name: 'Configure docker'
+        run: |
+          gcloud info
+          gcloud auth configure-docker europe-west3-docker.pkg.dev
+
+      - name: 'Download distributive from artifact registry'
+        uses: actions/download-artifact@v3
+        with:
+          name: distributive
+          path: ci/build/docker/files/usr/share/nginx/html
+
+      - name: 'Build image'
+        run: |
+          ls ci/build/docker/files/usr/share/nginx/html
+          
+          chmod +x ci/version.sh
+          source ci/version.sh
+          
+          docker build -t ${DOCKER_REGISTRY}/${DOCKER_IMAGE}:${VERSION} ci/build/docker
+          docker push ${DOCKER_REGISTRY}/${DOCKER_IMAGE}:${VERSION}
+
+  deploy:
+    name: "Deployment"
+    needs:
+      - containerization
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - name: 'Checkout code'
+        uses: actions/checkout@v2
+
+      - name: 'Login gcloud'
+        uses: 'google-github-actions/auth@v0'
+        with:
+          credentials_json: '${{ secrets.GCP_KEY }}'
+
+      - name: 'Set up Cloud SDK'
+        uses: 'google-github-actions/setup-gcloud@v0'
+
+      - name: 'Deployment'
+        run: |
+          chmod +x ci/version.sh
+          source ci/version.sh
+          
+          gcloud run deploy landing-techs --image=${DOCKER_REGISTRY}/${DOCKER_IMAGE}:${VERSION} --region=europe-west1 --project=overdubdev
+          
+          gcloud run services update-traffic landing-techs --to-latest --region=europe-west1 --project=overdubdev
